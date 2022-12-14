@@ -2,6 +2,27 @@
   text-align: center;
 }
 
+.armor-pieces-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weapons-container {
+  display: flex;
+}
+
+.weapons-desc {
+  align-items: center;
+}
+.weapons-desc-container {
+  align-items: center;
+}
+
+.item-container {
+  margin-right: 1rem;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
