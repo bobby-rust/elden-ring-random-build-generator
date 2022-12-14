@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.secondary-items-container {
+    display: flex;
+    align-items: center;
+}
+
+.sorc-container,
+.incant-container,
+.talismans-container,
+.ashes-spirits-container {
+    display: block;
+}
+
+.generate-button {
+    /* border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgba(121, 121, 121, 0.2); */
+}
+
+.generate-button:hover {
+    box-shadow: 5px 5px 10px rgba(121, 121, 121, 0.2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+#root {
+    background-color: #717171;
+    background-image: radial-gradient(#717171);
+}
+
+.armor-pieces-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapons-container {
+    display: flex;
+}
+
+.weapons-desc {
+    align-items: center;
+}
+.weapons-desc-container {
+    align-items: center;
+}
+
+.item-container {
+    margin-right: 1rem;
+    border: 1px solid black;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
