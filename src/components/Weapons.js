@@ -1,14 +1,8 @@
-import weapons_data from '../data/weapons_data.json'
+import getWeapons from '../functions/getWeapons'
 import Item from '../components/Item'
 import Shield from '../components/Shield'
 
-function Weapons() {
-    // Find weapon(s)
-    const rand_weapon_idx_1 = Math.floor(Math.random() * weapons_data.count)
-    const rand_weapon_idx_2 = Math.floor(Math.random() * weapons_data.count)
-    const rand_weapon_1 = weapons_data.data[rand_weapon_idx_1]
-    const rand_weapon_2 = weapons_data.data[rand_weapon_idx_2]
-    // End find weapon(s)
+function Weapons(props) {
 
     return (
         <>
@@ -16,13 +10,16 @@ function Weapons() {
                 <div className='weapons-outer'>
                     <h1>Weapons</h1>
                     <div className='weapons-container'>
-                        <Item item={rand_weapon_1} />
-                        <Item item={rand_weapon_2} />
+                        {props.weapons.map((weapon, idx) => {
+                            return (
+                                <Item item={weapon} />
+                            )
+                        })}
                     </div>
                 </div>
                 <div className='shield-outer'>
                     <h1>Shield</h1>
-                    <Shield />
+                    <Shield shields={props.shields} />
                 </div>
             </div>
         </>
