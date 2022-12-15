@@ -12,6 +12,7 @@ import Header from './components/Header'
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import generateBuild from './functions/generateBuild'
+import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 // maybe I should have an option to allow the user to keep most of the build but regenerate one item of their choosing. 
 
@@ -31,34 +32,58 @@ function App() {
     }
     // End generate new build
 
+    // Get button class
+    function getButtonClass() {
+        const buttonClass = "";
+
+        isLargeView ? buttonClass = "button-large" : buttonClass = "button-small"
+
+        return buttonClass;
+    }
+    // End get button class
+
+    function changeView() {
+        console.log("view changed")
+        setIsLargeView(!isLargeView)
+    }
+
     return (
         <div className='root'>
             <div className='App'>
                 <Header />
-                <div className='class-button-container'>
-                    <StartingClass starting_class={build["starting_class"]}/>
-                    <div className='button-container'>
-                        {/* <button
-                            className='generate-button'
-                            onClick={generateNewBuild}
-                        >
-                            GENERATE NEW BUILD
-                        </button> */}
-                        <Button className='button' onClick={generateNewBuild} variant='danger'>
-                            GENERATE NEW BUILD
-                        </Button>
+                <div className='body-container'>
+                    <div className='class-button-container'>
+                        <div className="toggle-button-container">
+                            <div className="toggle-button-label">Large View</div>
+                            <BootstrapSwitchButton checked={true} onstyle="light" offstyle="dark" style="border" onChange={changeView}/>
+                        </div>
+                        <StartingClass starting_class={build["starting_class"]}/>
+                        <div className='button-container'>
+                            {/* <button
+                                className='generate-button'
+                                onClick={generateNewBuild}
+                            >
+                                GENERATE NEW BUILD
+                            </button> */}
+                            <Button className="button-large" onClick={generateNewBuild} variant='danger'>
+                                GENERATE NEW BUILD
+                            </Button>
+                        </div>
+                    </div>
+                    <Weapons weapons={build["weapons"]} shields={build["shields"]} />
+                    <Armors armor={build["armor"]} />
+                    <div className='secondary-items-container'>
+                        <Sorceries sorcs={build["sorcs"]}/>
+                        <Incantations incants={build["incants"]}/>
+                        <Talismans talismans={build["talismans"]}/>
+                        <div className='ashes-spirits-container'>
+                            <Ashes ashes={build["ashes"]}/>
+                            <Spirits spirits={build["spirits"]} />
+                        </div>
                     </div>
                 </div>
-                <Weapons weapons={build["weapons"]} shields={build["shields"]} />
-                <Armors armor={build["armor"]} />
-                <div className='secondary-items-container'>
-                    <Sorceries sorcs={build["sorcs"]}/>
-                    <Incantations incants={build["incants"]}/>
-                    <Talismans talismans={build["talismans"]}/>
-                    <div className='ashes-spirits-container'>
-                        <Ashes ashes={build["ashes"]}/>
-                        <Spirits spirits={build["spirits"]} />
-                    </div>
+                <div className="dev-message-bottom-container">
+                    <p className="dev-message-bottom">This tool is in development. Some features may not work. There may be missing and/or incorrect data. Submit an issue or feature request <a href="https://github.com/bobby-rust/elden-ring-random-build-generator/issues" target="_blank" rel="noreferrer">here</a>.</p>
                 </div>
             </div>
         </div>

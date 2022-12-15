@@ -7,7 +7,6 @@ function Armors(props) {
         <h2>Armor</h2>
         <div className="armors-outer" >
             {props.armor.map((currArmor, idx) => {
-                    console.log(currArmor)
                     return (
                         <div className="armors-container">
                             <Item item={currArmor} />
