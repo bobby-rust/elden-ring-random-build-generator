@@ -4,15 +4,60 @@
     box-sizing: border-box;
 }
 
+@import '~mdb-ui-kit/css/mdb.min.css';
+
+.item-container {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.item-img {
+    height: 200px;
+    width: 200px;
+}
+
+.starting-class-img {
+    height: 400px;
+    width: 300px;
+}
+
+.item-img:hover {
+    height: 250px;
+    width: 250px;
+    cursor: pointer;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 .App {
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+
+    margin-bottom: 40px;
+}
+
+#starting-class {
+    height: 600px;
+    width: 300px;
+}
+
+#secondary-item-bottom {
+    border-top: 0;
 }
 
 .secondary-items-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    background-color: rgba(172, 172, 172, 0.3);
+    margin-bottom: 20px;
+}
+
+.starting-class-container {
+    width: 50%;
 }
 
 .sorceries-container,
@@ -20,36 +65,42 @@
 .talismans-container,
 .ashes-spirits-container {
     display: block;
-    border: 1px solid blue;
 }
 
 .generate-button {
-    /* border-radius: 5px;
-    height: 50px;
-    width: 100px;
-    border: none;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    box-shadow: 5px 5px 10px rgba(121, 121, 121, 0.2); */
-}
-
-.generate-button:hover {
-    box-shadow: 5px 5px 10px rgba(121, 121, 121, 0.2);
+    /* height: 100%;
+    width: 100%;
+    border: 1px solid grey;
+    background-color: rgb(255, 50, 50);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 500px;
+    font-size: 24px;
+    font-family: 'Oswald'; */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&family=Unbounded:wght@800&display=swap');
 
 #root {
-    background-color: #717171;
-    background-image: radial-gradient(#717171);
+    max-width: 100vw;
+    /* background: url('E:\Code\React\elden-ring-random-build-generator-main\src\elden-ring-bg5.jpg')
+        no-repeat center center;
+
+    background-size: cover; */
+    background-color: #acacac;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
 }
 
 .armors-outer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid purple;
+    background-color: rgba(172, 172, 172, 0.3);
 }
 
 .armors-container {
@@ -59,7 +110,7 @@
 .primary-items-container {
     display: flex;
     justify-content: center;
-    border: 1px solid red;
+    background-color: rgba(172, 172, 172, 0.3);
 }
 
 .weapons-container {
@@ -71,6 +122,16 @@
 .weapons-shield-container {
     justify-content: center;
     align-items: center;
+}
+
+.class-button-container {
+    display: flex;
+    z-index: -12;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(172, 172, 172, 0.3);
 }
 
 .weapons-desc {
@@ -85,26 +146,56 @@
     border: 1px solid black;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.button-container {
+    /* display: inline;
+    height: 150px;
+    width: 350px;
+    margin: auto;
+    margin-top: 100px;
+    margin-left: 100px;
+    z-index: 11; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.button-container:hover {
+    box-shadow: 5px 5px 10px rgba(54, 54, 54, 0.5);
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
+.header-container {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: 75px;
+    border-bottom: 1px solid black;
+    background-color: white;
 }
 
+.logo {
+    font-family: 'Unbounded';
+    display: inline;
+    margin: auto;
+    position: absolute;
+    font-size: 32px;
+    border-bottom: 1px solid black;
+    height: 35px;
+    margin-bottom: 10px;
+}
 
+.logo-container {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    height: 50px;
+    width: 175px;
+    transform: translateX(-350px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    height: 200px;
+    width: 400px;
+}

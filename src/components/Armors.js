@@ -1,5 +1,5 @@
-import armors_data from "../data/armors_data.json"
-import Item from "../components/Item";
+import armors_data from '../data/armors_data.json'
+import Item from '../components/Item'
 
 function Armors() {
     // Find armor
@@ -26,19 +26,19 @@ function Armors() {
 
     return (
         <>
-        <h2>Armor</h2>
-        <div className="armors-outer" >
-            {armors_found.map((armor, idx) => {
+            <h1>Armor</h1>
+            <div className='armors-outer'>
+                {armors_found.map((armor, idx) => {
                     console.log(armor)
                     return (
-                        <div className="armors-container">
-                        <Item item={armor} />
+                        <div className='armors-container'>
+                            <Item item={armor} />
                         </div>
                     )
                 })}
-        </div>
+            </div>
         </>
     )
 }
 
-export default Armors;
+export default Armors

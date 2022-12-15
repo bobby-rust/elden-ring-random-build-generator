@@ -1,5 +1,4 @@
 import classes_data from '../data/classes_data.json'
-import Item from '../components/Item'
 
 function StartingClass() {
     // Find class
@@ -8,10 +7,16 @@ function StartingClass() {
     // End find class
 
     return (
-        <div className="starting-class-container">
-            <Item item={starting_class} />
+        <div className='starting-class-container'>
+            <h2 className='item-title'>{starting_class.name}</h2>
+            <img
+                className='starting-class-img'
+                src={starting_class.image}
+                alt='item-img'
+            />
+            <p className='desc-container'>{starting_class.description}</p>
         </div>
     )
 }
 
-export default StartingClass;
+export default StartingClass

@@ -17,13 +17,13 @@ function Incantations() {
 
     return (
         <>
-            <div className="incantations-container">
-            <h2>Incantations</h2>
+            <div className='incantations-container'>
+                <h1>Incantations</h1>
                 <Item item={incant_1} />
-                <Item item={incant_2} />
+                <Item id='secondary-item-bottom' item={incant_2} />
             </div>
         </>
     )
 }
 
-export default Incantations;
+export default Incantations

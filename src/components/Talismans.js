@@ -13,14 +13,14 @@ function Talismans() {
     const talisman_1 = talismans_data.data[rand_talisman_idx_1]
     const talisman_2 = talismans_data.data[rand_talisman_idx_2]
     // End find talismans
-    
+
     return (
-        <div className="talismans-container">
-            <h2>Talismans</h2>
+        <div className='talismans-container'>
+            <h1>Talismans</h1>
             <Item item={talisman_1} />
-            <Item item={talisman_2} />
+            <Item className='secondary-item-bottom' item={talisman_2} />
         </div>
     )
 }
 
-export default Talismans;
+export default Talismans

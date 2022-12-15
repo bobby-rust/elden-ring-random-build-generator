@@ -3,7 +3,6 @@ import Item from '../components/Item'
 import Shield from '../components/Shield'
 
 function Weapons() {
-
     // Find weapon(s)
     const rand_weapon_idx_1 = Math.floor(Math.random() * weapons_data.count)
     const rand_weapon_idx_2 = Math.floor(Math.random() * weapons_data.count)
@@ -13,22 +12,21 @@ function Weapons() {
 
     return (
         <>
-        <h2>Primary Items</h2>
-        <div className="primary-items-container">
-            <div className="weapons-outer">
-                <h2>Weapons</h2>
-                <div className="weapons-container">
-                    <Item item={rand_weapon_1}/>
-                    <Item item={rand_weapon_2} />
+            <div className='primary-items-container'>
+                <div className='weapons-outer'>
+                    <h1>Weapons</h1>
+                    <div className='weapons-container'>
+                        <Item item={rand_weapon_1} />
+                        <Item item={rand_weapon_2} />
+                    </div>
+                </div>
+                <div className='shield-outer'>
+                    <h1>Shield</h1>
+                    <Shield />
                 </div>
             </div>
-            <div className="shield-outer">
-                <h2>Shield</h2>
-                <Shield />
-            </div>
-        </div>
         </>
     )
 }
 
-export default Weapons;
+export default Weapons
