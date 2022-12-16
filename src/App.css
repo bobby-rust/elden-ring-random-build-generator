@@ -265,7 +265,7 @@ body {
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
     height: 40px;
     margin-bottom: 5px;
-    text-shadow: 0 0 10px #efb809;
+    /* text-shadow: 0 0 10px rgba(239, 184, 9, 0.2); */
     margin-left: 80px;
 }
 
@@ -276,6 +276,7 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
+    text-shadow: 0 0 10px rgba(239, 184, 9, 0.2);
 }
 
 .button-large {
