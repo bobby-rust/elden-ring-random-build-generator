@@ -306,12 +306,20 @@ body {
     width: 100%;
 }
 
-a {
-
-}
 a:link {
     text-decoration: none;
 }
 
-a:visited {
+@media only screen and (max-width: 1200px) {
+    body {
+      background-color: lightblue !important;
+    }
+    .mobile-message {
+        height: 100vh;
+        width: 100vw;
+        font-size: 32px;
+        text-align: center;
+        color: #c7c7c7;
+    }
 }
+

@@ -18,6 +18,9 @@ import AnalyticsWrapper from './components/AnalyticsWrapper'
 
 function App() {
     // Set up state
+    const [mediaState, setMediaState] = React.useState({ isLargeMedia: window.matchMedia("(min-width: 1200px)").matches })
+    const handler = e => setMediaState({ isLargeMedia: e.matches })
+    window.matchMedia("(min-width: 1200px)").addEventListener('change', handler);
     // CSS Styling State
     const [isLargeView, setIsLargeView] = React.useState(true)
     // End CSS Styling State
@@ -49,8 +52,10 @@ function App() {
         setIsLargeView(!isLargeView)
     }
 
-    return (
+    return (<>
         <div className='root'>
+                {!mediaState.isLargeMedia && <div className="mobile-message">Mobile support coming soon.</div>}
+                {mediaState.isLargeMedia &&
             <div className='App'>
                 <Header />
                 <div className='body-container'>
@@ -117,8 +122,9 @@ function App() {
                     </p>
                     <AnalyticsWrapper />
                 </div>
+                </div>}
             </div>
-        </div>
+        </>
     )
 }
 
