@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+
 .item-title {
     color: black !important;
 }
