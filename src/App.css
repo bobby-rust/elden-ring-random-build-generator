@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+.item-title {
+    color: black !important;
+}
+
+.ashes-container-title, .incantations-container-title, .sorcs-container-title, .talis-container-title, .shields-container-title, .weapons-container-title {
+    color: black;
+
+}
+
+
+.armor-container-title {
+    color: black;
+}
+
 @import '~mdb-ui-kit/css/mdb.min.css';
 
 .item-container {
@@ -37,6 +51,14 @@
     margin: auto;
 }
 
+.weapons_underline {
+    height: 10px;
+    width: 100px;
+    background-color: black;
+    border: 1px solid black;
+    z-index: 99;
+}
+
 .body-container {
     width: 90%;
     margin: auto;
@@ -56,7 +78,6 @@
     align-items: center;
     justify-content: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
     background-color: rgba(172, 172, 172, 0.3);
     margin-bottom: 20px;
 }
@@ -90,7 +111,7 @@
 
     background-size: cover; */
     width: 100vw;
-    background-color: #acacac;
+    background-color: #454545;
 }
 
 body {
@@ -119,16 +140,26 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(172, 172, 172, 0.3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.armors-inner {
+    display: flex;
 }
 
 .armors-container {
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 .primary-items-container {
     display: flex;
     justify-content: center;
     background-color: rgba(172, 172, 172, 0.3);
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .weapons-container {
@@ -203,7 +234,8 @@ body {
     height: 75px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     /* background-color: rgb(74, 74, 74); */
-    background-color: #acacac;
+    background-color: #454545;
+    color: #c7c7c7;
 }
 
 .logo {
@@ -242,7 +274,8 @@ body {
 }
 
 .dev-message-bottom {
-    font-size: 16px
+    font-size: 16px;
+    color: #c7c7c7;
 }
 
 .dev-message-inner {

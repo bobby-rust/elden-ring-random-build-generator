@@ -4,8 +4,9 @@ function Armors(props) {
 
     return (
         <>
-        <h2>Armor</h2>
         <div className="armors-outer" >
+            <h1 className="armor-container-title">Armor</h1>
+            <div className="armors-inner">
             {props.armor.map((currArmor, idx) => {
                     return (
                         <div className="armors-container">
@@ -13,6 +14,7 @@ function Armors(props) {
                         </div>
                     )
                 })}
+                </div>
         </div>
         </>
     )

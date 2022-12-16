@@ -13,7 +13,7 @@ function Header() {
             </div>
             <div className="dev-message-container">
                 <div className="dev-message-inner">
-                    <p className="dev-message">This tool is in development. Some features may not work. View this project on <a target="_blank" rel="noreferrer" href="https://github.com/bobby-rust/elden-ring-random-build-generator/tree/master">github</a></p>
+                    <p className="dev-message">This tool is in development. Some features may not work. View this project on <a target="_blank" rel="noreferrer" href="https://github.com/bobby-rust/elden-ring-random-build-generator/tree/master">github</a>.</p>
                 </div>
             </div>
         </div>
