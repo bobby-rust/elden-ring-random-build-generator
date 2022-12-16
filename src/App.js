@@ -33,15 +33,15 @@ function App() {
     // End generate new build
 
     // Get button class
-    function getButtonClass() {
-        const buttonClass = ''
+    // function getButtonClass() {
+    //     const buttonClass = ''
 
-        isLargeView
-            ? (buttonClass = 'button-large')
-            : (buttonClass = 'button-small')
+    //     isLargeView
+    //         ? (buttonClass = 'button-large')
+    //         : (buttonClass = 'button-small')
 
-        return buttonClass
-    }
+    //     return buttonClass
+    // }
     // End get button class
 
     function changeView() {
@@ -105,7 +105,7 @@ function App() {
                     <p className='dev-message-bottom'>
                         This tool is in development. Some features may not work.
                         There may be missing and/or incorrect data. Submit an
-                        issue or feature request{' '}
+                        issue or make a feature request{' '}
                         <a
                             href='https://github.com/bobby-rust/elden-ring-random-build-generator/issues'
                             target='_blank'
