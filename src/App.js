@@ -69,6 +69,7 @@ function App() {
                                 onstyle='light'
                                 offstyle='dark'
                                 style='border'
+                                width='90'
                                 onChange={changeView}
                             />
                         </div>
