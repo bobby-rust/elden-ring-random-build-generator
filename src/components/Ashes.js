@@ -1,4 +1,5 @@
 import Item from '../components/Item'
+import { v4 } from 'uuid'
 
 function Ashes(props) {
 
@@ -7,7 +8,7 @@ function Ashes(props) {
             <h1 className="section-container-title">Ashes</h1>
             {props.ashes.map((ash, idx) => {
                 return (
-                    <Item item={ash} />
+                    <Item item={ash} CSS={props.CSS} key={v4()}/>
                 )
             })}
         </div>

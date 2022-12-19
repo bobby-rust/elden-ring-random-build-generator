@@ -14,7 +14,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import generateRandomBuild from './functions/generateRandomBuild'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 import AnalyticsWrapper from './components/AnalyticsWrapper'
-
 // add an option to allow the user to keep most of the build but regenerate one item of their choosing.
 
 // Armor piece Redmane knight gauntlets id: 17f693ced0bl0i0oh402gmm7bjbdty description is null
@@ -31,8 +30,13 @@ function App() {
     window.matchMedia("(min-width: 1200px)").addEventListener('change', handler);
     // End set up media state
 
+    // Set up button state
+    const [buttonState, setButtonState] = React.useState(true)
+    // End set up button state
+
     // CSS Styling State
     const [isLargeView, setIsLargeView] = React.useState(true)
+    const [darkMode, setDarkMode] = React.useState({ isDarkMode: true, CSS: "" }) // 
     // End CSS Styling State
 
     // Set up items state
@@ -42,57 +46,48 @@ function App() {
     // Generate new build
     function generateNewBuild() {
         setBuild(generateRandomBuild())
+
+        console.log(buttonState)
     }
     // End generate new build
 
-    // Get button class
-    // function getButtonClass() {
-    //     const buttonClass = ''
-
-    //     isLargeView
-    //         ? (buttonClass = 'button-large')
-    //         : (buttonClass = 'button-small')
-
-    //     return buttonClass
-    // }
-    // End get button class
-
-    function changeView() {
-        console.log('view changed')
-        setIsLargeView(!isLargeView)
+    // Handle color button toggle
+    function handleColorChange() {
+        setButtonState(!buttonState);
+        
+        if (darkMode.isDarkMode) {
+            setDarkMode({ isDarkMode: false, CSS: "-lt" })
+        }
+        if (!darkMode.isDarkMode) {
+            setDarkMode({ isDarkMode: true, CSS: "" })
+        }
     }
 
     return (<>
         <div className='root'>
             {!mediaState.isLargeMedia && <div className="mobile-message">Mobile support coming soon.</div>}
             {mediaState.isLargeMedia &&
-            <div className='App'>
-                <Header />
+            <div className={`App${darkMode.CSS}`}>
+                <Header CSS={darkMode.CSS}/>
                 <div className='body-container'>
-                    <div className='class-button-container'>
+                    <div className={`class-button-container${darkMode.CSS}`}>
                         <div className='toggle-button-container'>
                             <div className='toggle-button-label'>
-                                Large View
+                                Dark mode
                             </div>
                             <BootstrapSwitchButton
-                                checked={true}
-                                onstyle='light'
-                                offstyle='dark'
+                                checked={buttonState}
+                                onstyle='dark'
+                                offstyle='light'
                                 style='border'
                                 width='90'
-                                onChange={changeView}
+                                onChange={handleColorChange}
                             />
                         </div>
                         <StartingClass
                             starting_class={build['starting_class']}
                         />
                         <div className='button-container'>
-                            {/* <button
-                                className='generate-button'
-                                onClick={generateNewBuild}
-                            >
-                                GENERATE NEW BUILD
-                            </button> */}
                             <Button
                                 className='button-large'
                                 onClick={generateNewBuild}
@@ -105,15 +100,17 @@ function App() {
                     <Weapons
                         weapons={build['weapons']}
                         shields={build['shields']}
+                        CSS={darkMode.CSS}
+                    
                     />
-                    <Armors armor={build['armor']} />
-                    <div className='secondary-items-container'>
-                        <Sorceries sorcs={build['sorcs']} />
-                        <Incantations incants={build['incants']} />
-                        <Talismans talismans={build['talismans']} />
+                    <Armors armor={build['armor']} CSS={darkMode.CSS}/>
+                    <div className={`secondary-items-container${darkMode.CSS}`}>
+                        <Sorceries sorcs={build['sorcs']} CSS={darkMode.CSS}/>
+                        <Incantations incants={build['incants']} CSS={darkMode.CSS}/>
+                        <Talismans talismans={build['talismans']} CSS={darkMode.CSS}/>
                         <div className='ashes-spirits-container'>
-                            <Ashes ashes={build['ashes']} />
-                            <Spirits spirits={build['spirits']} />
+                            <Ashes ashes={build['ashes']} CSS={darkMode.CSS}/>
+                            <Spirits spirits={build['spirits']} CSS={darkMode.CSS} />
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
-function Header() {
+function Header(props) {
     return (
-        <div className='header-container'>
+        <div className={`header-container${props.CSS}`}>
             <div className='logo-container'>
                 <div className="logo-inner">
                     <div className='logo'><div className="ER">ER</div><div className="BG">BG</div></div>

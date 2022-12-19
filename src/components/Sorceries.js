@@ -1,4 +1,5 @@
 import Item from '../components/Item'
+import { v4 } from 'uuid'
 
 function Sorceries(props) {
 
@@ -7,7 +8,7 @@ function Sorceries(props) {
             <h1 className="section-container-title">Sorceries</h1>
             {props.sorcs.map((sorc, idx) => {
                 return (
-                    <Item item={sorc} />
+                    <Item item={sorc} CSS={props.CSS} key={v4()}/>
                 )
             })}
         </div>

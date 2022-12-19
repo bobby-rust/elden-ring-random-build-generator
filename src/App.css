@@ -1,11 +1,89 @@
+/**
+* GLOBAL 
+*/
+@import '~mdb-ui-kit/css/mdb.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&family=Unbounded:wght@800&family=Cormorant+Garamond:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    max-width: 100vw;
+    width: 100vw;
+    --bg-dkmd-dk: #232323;
+    --bg-dkmd-lt: rgb(45, 45, 45);
+    --font-dkmd: #c7c7c7;
+    --border-dkmd: rgba(199, 199, 199, 0.2);
+    --highlight-dkmd-lt: rgba(50, 50, 50, 0.7);
+    --elden-font: 'Cormorant Garamond';
+    --bg-ltmd-lt: white;
+    --bg-ltmd-dk: #c7c7c7;
+    --font-ltmd: black;
+    --highlight-ltmd-dk: rgba(220, 220, 220, 0.5);
+}
 /**
- * --------------------- Dark Mode ----------------------
+* END GLOBAL
 */
+
+/**
+* --------------------- Dark Mode ----------------------
+*/
+
+/**
+* General
+*/
+.title {
+    font-family: var(--elden-font) !important; 
+    font-weight: bold;
+    font-size: 28px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.App {
+    text-align: center;
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+    margin-bottom: 40px;
+    margin: auto;
+    background-color: var(--bg-dkmd-dk);
+    color: var(--font-dkmd);
+}
+
+.body-container {
+    width: 90%;
+    margin: auto;
+}
+
+.primary-items-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: var(--bg-dkmd-lt);
+}
+
+.logo-container, .title-container, .dev-message-container {
+    width: max-content;
+    flex-shrink: 1;
+    flex: 1;
+}
+/**
+ * End general
+*/
+
 /**
  * Scrollbar
 */
@@ -34,7 +112,41 @@
 }
 
 .item-title {
-    font-family: 'Cormorant Garamond';
+    font-family: var(--elden-font);
+}
+
+.item-container {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-right: 1rem;
+    border: 1px solid var(--border-dkmd);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-container:hover {
+    overflow-y: visible;
+    background-color: var(--highlight-dkmd-lt); 
+}
+
+.item-img {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.item-title, .section-container-title {
+    font-family: var(--elden-font);
+}
+
+.item-img:hover {
+    height: 205px;
+    width: 205px;
+    cursor: pointer;
 }
 /**
  * End item
@@ -49,74 +161,10 @@
     justify-content: center;
     align-items: center;
 }
-/**
- * End class
-*/
-
-
-
-.item-title, .section-container-title {
-    font-family: 'Cormorant Garamond';
-}
-
-@import '~mdb-ui-kit/css/mdb.min.css';
-
-.item-container {
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
-    border-radius: 3px;
-    margin-right: 1rem;
-    border: 1px solid var(--border-dkmd);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-basis: auto;
-    flex: 1 1 auto; */
-}
-
-.item-container:hover {
-    /* height: 310px; 
-    width: 305px; */
-    overflow-y: visible;
-    /* margin-bottom: 1rem; */
-    background-color: var(--highlight-dkmd-lt); 
-}
-
-.item-img {
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
-}
 
 .starting-class-img {
     height: 400px;
     width: 300px;
-}
-
-.item-img:hover {
-    height: 205px;
-    width: 205px;
-    cursor: pointer;
-    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); */
-    /* border-radius: 3px; */
-}
-
-.App {
-    text-align: center;
-    font-family: 'Poppins', 'Quicksand', sans-serif;
-    margin-bottom: 40px;
-    margin: auto;
-    background-color: var(--bg-dkmd-dk);
-    color: var(--font-dkmd);
-}
-
-.body-container {
-    width: 90%;
-    margin: auto;
 }
 
 #starting-class {
@@ -124,6 +172,34 @@
     width: 300px;
 }
 
+.starting-class-container {
+    width: 50%;
+    height: 450px;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-button-container {
+    display: flex;
+    z-index: -12;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color:var(--bg-dkmd-lt);
+}
+/**
+ * End class
+*/
+
+/**
+ * Secondary Items
+*/
 #secondary-item-bottom {
     border-top: 0;
 }
@@ -138,142 +214,28 @@
     background-color:var(--bg-dkmd-lt);
 }
 
-.starting-class-container {
-    width: 50%;
-    height: 450px;
-    overflow-y: hidden;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-
 .sorceries-container,
 .incantations-container,
 .talismans-container,
 .ashes-spirits-container {
     display: block;
 }
+/**
+ * End secondary Items
+*/
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&family=Unbounded:wght@800&family=Cormorant+Garamond:wght@500&display=swap');
-
-.title {
-    font-family: 'Cormorant Garamond' !important; 
-    font-weight: bold;
-    font-size: 28px;
-}
-
-:root {
-    max-width: 100vw;
-    /* background: url('E:\Code\React\elden-ring-random-build-generator-main\src\elden-ring-bg5.jpg')
-    no-repeat center center;
-    background-size: cover; */
-    width: 100vw;
-    --bg-dkmd-dk: #232323;
-    --bg-dkmd-lt: rgb(45, 45, 45);
-    --font-dkmd: #c7c7c7;
-    --border-dkmd: rgba(199, 199, 199, 0.2);
-    --highlight-dkmd-lt: rgba(50, 50, 50, 0.7);
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-}
-
+/**
+ * Header
+*/
 .ER, .BG {
     display: inline;
 }
 
 .ER {
     color: #ef8b09; 
-    /* text-shadow: -1px 1px 0 #000,
-				  1px 1px 0 #000,
-				 1px -1px 0 #000,
-				-1px -1px 0 #000; */
     text-shadow: none;
-
 }
 
-.armors-outer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background-color: var(--bg-dkmd-lt);
-}
-
-.armors-inner {
-    display: flex;
-}
-
-.armors-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-.primary-items-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    background-color: var(--bg-dkmd-lt);
-}
-
-.weapons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.weapons-shield-container {
-    justify-content: center;
-    align-items: center;
-}
-
-.class-button-container {
-    display: flex;
-    z-index: -12;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background-color:var(--bg-dkmd-lt);
-}
-
-.button-container:hover {
-    box-shadow: 0px 0px 10px rgba(54, 54, 54, 0.5);
-    
-}
-
-.button-container {
-    border-radius: 5px;
-}
-
-.logo-container, .title-container, .dev-message-container {
-    width: max-content;
-    flex-shrink: 1;
-    flex: 1;
-}
-
-.dev-message-container, .dev-message-inner, .dev-message-bottom-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dev-message-inner, .title-inner, .logo-inner {
-    /* width: 200px; */
-    height: 100%;
-}
 .header-container {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -310,6 +272,64 @@ body {
     align-items: center;
     text-shadow: 0 0 10px rgba(239, 184, 9, 0.2);
 }
+/**
+ * End header
+*/
+
+/** 
+ * Armor
+*/
+.armors-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-dkmd-lt);
+}
+
+.armors-inner {
+    display: flex;
+}
+
+.armors-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+/**
+ * End armor
+*/
+
+/**
+ * Weapons
+*/
+.weapons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapons-shield-container {
+    justify-content: center;
+    align-items: center;
+}
+/**
+ * End weapons
+*/
+
+/**
+ * Generate button
+*/
+.button-container:hover {
+    box-shadow: 0px 0px 10px rgba(54, 54, 54, 0.5);
+}
+
+.button-container {
+    border-radius: 5px;
+}
 
 .button-large {
     height: 200px;
@@ -317,6 +337,19 @@ body {
     background-color: #ef8b09 !important;
     border-color: #efb809 !important; 
     border: none !important;
+}
+/**
+ * Dev message
+*/
+.dev-message-container, .dev-message-inner, .dev-message-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-message-inner, .title-inner, .logo-inner {
+    /* width: 200px; */
+    height: 100%;
 }
 
 .dev-message {
@@ -336,11 +369,365 @@ body {
     height: 75px;
     width: 100%;
 }
+/**
+ * End dev message 
+*/
+
+/**
+* --------------------- End Dark Mode ----------------------
+*/
+
+/**
+* --------------------- Light Mode ----------------------
+*/
+
+/**
+* General
+*/
+.title {
+    font-family: var(--elden-font) !important; 
+    font-weight: bold;
+    font-size: 28px;
+}
 
 a:link {
     text-decoration: none;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.App-lt {
+    text-align: center;
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+    margin-bottom: 40px;
+    margin: auto;
+    background-color: var(--bg-ltmd-lt);
+    color: var(--font-ltmd);
+}
+
+.body-container {
+    width: 90%;
+    margin: auto;
+}
+
+.primary-items-container-lt {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: var(--bg-ltmd-dk);
+}
+
+.logo-container, .title-container, .dev-message-container {
+    width: max-content;
+    flex-shrink: 1;
+    flex: 1;
+}
+/**
+ * End general
+*/
+
+/**
+ * Scrollbar
+*/
+::-webkit-scrollbar-lt {
+    background-color: #202324;
+    color: #aba499;
+}
+
+::-webkit-scrollbar-corner-lt {
+    background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb-lt {
+    background-color: #454a4d;
+}
+/**
+ * End scrollbar
+*/
+
+/**
+ * Item
+*/
+.desc-container {
+    height: 50px;
+    font-size: 14px;
+}
+
+.item-title {
+    font-family: var(--elden-font);
+}
+
+.item-container-lt {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-right: 1rem;
+    border: 1px solid var(--border-dkmd);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-container-lt:hover {
+    overflow-y: visible;
+    background-color: var(--highlight-ltmd-dk); 
+}
+
+.item-img {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.item-title, .section-container-title {
+    font-family: var(--elden-font);
+}
+
+.item-img:hover {
+    height: 205px;
+    width: 205px;
+    cursor: pointer;
+}
+/**
+ * End item
+*/
+
+/**
+ * Class
+*/
+.class-desc-container {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starting-class-img {
+    height: 400px;
+    width: 300px;
+}
+
+#starting-class {
+    height: 600px;
+    width: 300px;
+}
+
+.starting-class-container {
+    width: 50%;
+    height: 450px;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-button-container-lt {
+    display: flex;
+    z-index: -12;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color:var(--bg-ltmd-dk);
+}
+/**
+ * End class
+*/
+
+/**
+ * Secondary Items
+*/
+#secondary-item-bottom {
+    border-top: 0;
+}
+
+.secondary-items-container-lt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color:var(--bg-ltmd-dk);
+}
+
+.sorceries-container,
+.incantations-container,
+.talismans-container,
+.ashes-spirits-container {
+    display: block;
+}
+/**
+ * End secondary Items
+*/
+
+/**
+ * Header
+*/
+.ER, .BG {
+    display: inline;
+}
+
+.ER {
+    color: #ef8b09; 
+    text-shadow: none;
+}
+
+.header-container-lt {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: 75px;
+    border-bottom: 1px solid var(--border-dkmd);
+    background-color: var(--bg-ltmd-dk);
+}
+
+.logo {
+    font-family: 'Unbounded';
+    display: inline;
+    margin: auto;
+    position: absolute;
+    font-size: 32px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+    height: 40px;
+    margin-bottom: 5px;
+    /* text-shadow: 0 0 10px rgba(239, 184, 9, 0.2); */
+    margin-left: 80px;
+}
+
+.logo-container {
+    /* box-shadow: 0px 0px 10px #ef8b09; */
+    height: 50px;
+    width: 175px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-shadow: 0 0 10px rgba(239, 184, 9, 0.2);
+}
+/**
+ * End header
+*/
+
+/** 
+ * Armor
+*/
+.armors-outer-lt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-ltmd-dk);
+}
+
+.armors-inner {
+    display: flex;
+}
+
+.armors-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+/**
+ * End armor
+*/
+
+/**
+ * Weapons
+*/
+.weapons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapons-shield-container {
+    justify-content: center;
+    align-items: center;
+}
+/**
+ * End weapons
+*/
+
+/**
+ * Generate button
+*/
+.button-container:hover {
+    box-shadow: 0px 0px 10px rgba(54, 54, 54, 0.5);
+}
+
+.button-container {
+    border-radius: 5px;
+}
+
+.button-large {
+    height: 200px;
+    width: 400px;
+    background-color: #ef8b09 !important;
+    border-color: #efb809 !important; 
+    border: none !important;
+}
+/**
+ * Dev message
+*/
+.dev-message-container, .dev-message-inner, .dev-message-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-message-inner, .title-inner, .logo-inner {
+    /* width: 200px; */
+    height: 100%;
+}
+
+.dev-message {
+    font-size: 12px;
+    max-width: 80%;
+}
+
+.dev-message-bottom {
+    font-size: 16px;
+}
+
+.dev-message-inner {
+    margin-top: 10px;
+}
+
+.dev-message-container, .dev-message-bottom-container {
+    height: 75px;
+    width: 100%;
+}
+/**
+ * End dev message 
+*/
+
+/**
+* --------------------- End Light Mode ----------------------
+*/
+
+/**
+ * --------------------- Mobile ----------------------
+*/
 @media only screen and (max-width: 1200px) {
     body {
       background-color: lightblue !important;

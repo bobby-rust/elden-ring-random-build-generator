@@ -1,4 +1,5 @@
 import Item from '../components/Item'
+import { v4 } from 'uuid'
 
 function Incantations(props) {
 
@@ -9,7 +10,7 @@ function Incantations(props) {
                 {props.incants.map((incant, idx) => {
                     // console.log(incant)
                     return (
-                            <Item item={incant} />
+                            <Item item={incant} CSS={props.CSS} key={v4()}/>
                     )
                 })}
             </div>

@@ -1,4 +1,5 @@
 import Item from '../components/Item'
+import { v4 } from 'uuid'
 
 function Spirits(props) {
 
@@ -7,7 +8,7 @@ function Spirits(props) {
             {/* <h2>Spirits</h2> */}
             {props.spirits.map((spirit, idx) => {
                 return (
-                    <Item item={spirit} />
+                    <Item item={spirit} CSS={props.CSS} key={v4()}/>
                 )
             })}
         </div>
