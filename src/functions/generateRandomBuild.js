@@ -8,7 +8,7 @@ import getTalismans from './getTalismans'
 import getWeapons from './getWeapons'
 import getClass from './getClass'
 
-function generateBuild() {
+function generateRandomBuild() {
 
     // We can pass as parameter number of each item to generate.
     // default to 16 total
@@ -27,4 +27,4 @@ function generateBuild() {
     return build;
 }
 
-export default generateBuild;
+export default generateRandomBuild;

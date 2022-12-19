@@ -8,7 +8,6 @@ function Weapons(props) {
             <div className='primary-items-container'>
                 <div className='weapons-outer'>
                     <h1 className="weapons-container-title">Weapons</h1>
-                    <div className="weapons-underline"></div>
                     <div className='weapons-container'>
                         {props.weapons.map((weapon, idx) => {
                             return (

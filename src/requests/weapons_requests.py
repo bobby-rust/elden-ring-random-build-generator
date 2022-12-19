@@ -18,7 +18,6 @@ for object in dataDict_pg3["data"]:
 for object in dataDict_pg4["data"]:
     weapons_data_dict["data"].append(object)
 
-
 name_list = []
 
 for object in weapons_data_dict['data']:
