@@ -3,7 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/**
+ * --------------------- Dark Mode ----------------------
+*/
+/**
+ * Scrollbar
+*/
 ::-webkit-scrollbar {
     background-color: #202324;
     color: #aba499;
@@ -16,28 +21,41 @@
 ::-webkit-scrollbar-thumb {
     background-color: #454a4d;
 }
+/**
+ * End scrollbar
+*/
 
+/**
+ * Item
+*/
 .desc-container {
-    color: #c7c7c7;
     height: 50px;
     font-size: 14px;
 }
 
+.item-title {
+    font-family: 'Cormorant Garamond';
+}
+/**
+ * End item
+*/
+
+/**
+ * Class
+*/
 .class-desc-container {
-    color: #c7c7c7;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/**
+ * End class
+*/
 
-.shield-container-title, .armor-container-title, .ashes-container-title, .incantations-container-title, .sorcs-container-title, .talis-container-title, .shields-container-title, .weapons-container-title {
-    color: #c7c7c7;
-    /* color: #181a1b; */
-    font-family: 'Cormorant Garamond';
-}
 
-.item-title {
+
+.item-title, .section-container-title {
     font-family: 'Cormorant Garamond';
 }
 
@@ -49,22 +67,25 @@
     overflow: hidden;
     border-radius: 3px;
     margin-right: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-dkmd);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-basis: auto;
-    flex: 1 1 auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-basis: auto;
+    flex: 1 1 auto; */
 }
 
 .item-container:hover {
-    height: 310px; 
-    width: 310px;
+    /* height: 310px; 
+    width: 305px; */
     overflow-y: visible;
+    /* margin-bottom: 1rem; */
+    background-color: var(--highlight-dkmd-lt); 
 }
+
 .item-img {
     height: 200px;
     width: 200px;
@@ -77,10 +98,9 @@
 }
 
 .item-img:hover {
-    /* height: 205px; */
-    /* width: 205px; */
-    /* cursor: pointer; */
-    /* background-color: rgba(255, 255, 255, 0.2); */
+    height: 205px;
+    width: 205px;
+    cursor: pointer;
     /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); */
     /* border-radius: 3px; */
 }
@@ -90,13 +110,13 @@
     font-family: 'Poppins', 'Quicksand', sans-serif;
     margin-bottom: 40px;
     margin: auto;
+    background-color: var(--bg-dkmd-dk);
+    color: var(--font-dkmd);
 }
 
 .body-container {
     width: 90%;
     margin: auto;
-    color: #181a1b;
-    color: #c7c7c7;
 }
 
 #starting-class {
@@ -113,10 +133,9 @@
     align-items: center;
     justify-content: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: rgba(172, 172, 172, 0.3);
     margin-bottom: 20px;
     border-radius: 5px;
-
+    background-color:var(--bg-dkmd-lt);
 }
 
 .starting-class-container {
@@ -145,21 +164,23 @@
     font-size: 28px;
 }
 
-#root {
+:root {
     max-width: 100vw;
     /* background: url('E:\Code\React\elden-ring-random-build-generator-main\src\elden-ring-bg5.jpg')
     no-repeat center center;
     background-size: cover; */
     width: 100vw;
-    background-color: #2f2f2f;
-    color: #181a1b;
+    --bg-dkmd-dk: #232323;
+    --bg-dkmd-lt: rgb(45, 45, 45);
+    --font-dkmd: #c7c7c7;
+    --border-dkmd: rgba(199, 199, 199, 0.2);
+    --highlight-dkmd-lt: rgba(50, 50, 50, 0.7);
 }
 
 body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-
 }
 
 .ER, .BG {
@@ -180,11 +201,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(172, 172, 172, 0.3);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     margin-bottom: 20px;
     border-radius: 5px;
+    background-color: var(--bg-dkmd-lt);
 }
 
 .armors-inner {
@@ -199,10 +220,10 @@ body {
 .primary-items-container {
     display: flex;
     justify-content: center;
-    background-color: rgba(172, 172, 172, 0.3);
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    background-color: var(--bg-dkmd-lt);
 }
 
 .weapons-container {
@@ -223,10 +244,9 @@ body {
     justify-content: center;
     flex: 1;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: rgba(172, 172, 172, 0.3);
     margin-bottom: 20px;
     border-radius: 5px;
-
+    background-color:var(--bg-dkmd-lt);
 }
 
 .button-container:hover {
@@ -264,10 +284,8 @@ body {
     margin-right: 0;
     margin-bottom: 20px;
     height: 75px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    /* background-color: rgb(74, 74, 74); */
-    background-color: #2f2f2f;
-    color: #c7c7c7;
+    border-bottom: 1px solid var(--border-dkmd);
+    background-color: var(--bg-dkmd-dk);
 }
 
 .logo {
@@ -308,7 +326,6 @@ body {
 
 .dev-message-bottom {
     font-size: 16px;
-    color: #c7c7c7;
 }
 
 .dev-message-inner {
@@ -333,7 +350,7 @@ a:link {
         width: 100vw;
         font-size: 32px;
         text-align: center;
-        color: #c7c7c7;
+        color: var(--font-dkmd);
     }
 }
 

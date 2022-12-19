@@ -4,7 +4,7 @@ function Ashes(props) {
 
     return (
         <div className='ashes-container'>
-            <h1 className="ashes-container-title">Ashes</h1>
+            <h1 className="section-container-title">Ashes</h1>
             {props.ashes.map((ash, idx) => {
                 return (
                     <Item item={ash} />
