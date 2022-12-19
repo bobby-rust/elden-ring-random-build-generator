@@ -37,7 +37,7 @@
 * General
 */
 .title {
-    font-family: var(--elden-font) !important; 
+    font-family: var(--elden-font) !important;
     font-weight: bold;
     font-size: 28px;
 }
@@ -75,7 +75,9 @@ body {
     background-color: var(--bg-dkmd-lt);
 }
 
-.logo-container, .title-container, .dev-message-container {
+.logo-container,
+.title-container,
+.dev-message-container {
     width: max-content;
     flex-shrink: 1;
     flex: 1;
@@ -130,7 +132,7 @@ body {
 
 .item-container:hover {
     overflow-y: visible;
-    background-color: var(--highlight-dkmd-lt); 
+    background-color: var(--highlight-dkmd-lt);
 }
 
 .item-img {
@@ -139,7 +141,8 @@ body {
     cursor: pointer;
 }
 
-.item-title, .section-container-title {
+.item-title,
+.section-container-title {
     font-family: var(--elden-font);
 }
 
@@ -191,7 +194,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     border-radius: 5px;
-    background-color:var(--bg-dkmd-lt);
+    background-color: var(--bg-dkmd-lt);
 }
 /**
  * End class
@@ -211,7 +214,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     border-radius: 5px;
-    background-color:var(--bg-dkmd-lt);
+    background-color: var(--bg-dkmd-lt);
 }
 
 .sorceries-container,
@@ -227,12 +230,13 @@ body {
 /**
  * Header
 */
-.ER, .BG {
+.ER,
+.BG {
     display: inline;
 }
 
 .ER {
-    color: #ef8b09; 
+    color: #ef8b09;
     text-shadow: none;
 }
 
@@ -335,19 +339,27 @@ body {
     height: 200px;
     width: 400px;
     background-color: #ef8b09 !important;
-    border-color: #efb809 !important; 
+    border-color: #efb809 !important;
     border: none !important;
 }
 /**
+ * End generate button
+*/
+
+/**
  * Dev message
 */
-.dev-message-container, .dev-message-inner, .dev-message-bottom-container {
+.dev-message-container,
+.dev-message-inner,
+.dev-message-bottom-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dev-message-inner, .title-inner, .logo-inner {
+.dev-message-inner,
+.title-inner,
+.logo-inner {
     /* width: 200px; */
     height: 100%;
 }
@@ -365,7 +377,8 @@ body {
     margin-top: 10px;
 }
 
-.dev-message-container, .dev-message-bottom-container {
+.dev-message-container,
+.dev-message-bottom-container {
     height: 75px;
     width: 100%;
 }
@@ -385,7 +398,7 @@ body {
 * General
 */
 .title {
-    font-family: var(--elden-font) !important; 
+    font-family: var(--elden-font) !important;
     font-weight: bold;
     font-size: 28px;
 }
@@ -423,7 +436,9 @@ body {
     background-color: var(--bg-ltmd-dk);
 }
 
-.logo-container, .title-container, .dev-message-container {
+.logo-container,
+.title-container,
+.dev-message-container {
     width: max-content;
     flex-shrink: 1;
     flex: 1;
@@ -478,7 +493,7 @@ body {
 
 .item-container-lt:hover {
     overflow-y: visible;
-    background-color: var(--highlight-ltmd-dk); 
+    background-color: var(--highlight-ltmd-dk);
 }
 
 .item-img {
@@ -487,7 +502,8 @@ body {
     cursor: pointer;
 }
 
-.item-title, .section-container-title {
+.item-title,
+.section-container-title {
     font-family: var(--elden-font);
 }
 
@@ -539,7 +555,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     border-radius: 5px;
-    background-color:var(--bg-ltmd-dk);
+    background-color: var(--bg-ltmd-dk);
 }
 /**
  * End class
@@ -559,7 +575,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     border-radius: 5px;
-    background-color:var(--bg-ltmd-dk);
+    background-color: var(--bg-ltmd-dk);
 }
 
 .sorceries-container,
@@ -575,12 +591,13 @@ body {
 /**
  * Header
 */
-.ER, .BG {
+.ER,
+.BG {
     display: inline;
 }
 
 .ER {
-    color: #ef8b09; 
+    color: #ef8b09;
     text-shadow: none;
 }
 
@@ -683,19 +700,23 @@ body {
     height: 200px;
     width: 400px;
     background-color: #ef8b09 !important;
-    border-color: #efb809 !important; 
+    border-color: #efb809 !important;
     border: none !important;
 }
 /**
  * Dev message
 */
-.dev-message-container, .dev-message-inner, .dev-message-bottom-container {
+.dev-message-container,
+.dev-message-inner,
+.dev-message-bottom-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dev-message-inner, .title-inner, .logo-inner {
+.dev-message-inner,
+.title-inner,
+.logo-inner {
     /* width: 200px; */
     height: 100%;
 }
@@ -713,7 +734,8 @@ body {
     margin-top: 10px;
 }
 
-.dev-message-container, .dev-message-bottom-container {
+.dev-message-container,
+.dev-message-bottom-container {
     height: 75px;
     width: 100%;
 }
@@ -730,7 +752,7 @@ body {
 */
 @media only screen and (max-width: 1200px) {
     body {
-      background-color: lightblue !important;
+        background-color: lightblue !important;
     }
     .mobile-message {
         height: 100vh;
@@ -740,4 +762,3 @@ body {
         color: var(--font-dkmd);
     }
 }
-
