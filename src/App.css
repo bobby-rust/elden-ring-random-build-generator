@@ -30,6 +30,10 @@
 */
 
 /**
+* --------------------- Large Layout ----------------------
+*/
+
+/**
 * --------------------- Dark Mode ----------------------
 */
 
@@ -621,15 +625,12 @@ body {
     margin: auto;
     position: absolute;
     font-size: 32px;
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
     height: 40px;
     margin-bottom: 5px;
-    /* text-shadow: 0 0 10px rgba(239, 184, 9, 0.2); */
     margin-left: 80px;
 }
 
 .logo-container {
-    /* box-shadow: 0px 0px 10px #ef8b09; */
     height: 50px;
     width: 175px;
     display: flex;
@@ -745,6 +746,734 @@ body {
 
 /**
 * --------------------- End Light Mode ----------------------
+*/
+
+/**
+* --------------------- End Large Layout ----------------------
+*/
+
+/**
+* --------------------- Small Layout ----------------------
+*/
+
+/**
+* --------------------- Dark Mode ----------------------
+*/
+
+/**
+* General
+*/
+.title {
+    font-family: var(--elden-font) !important;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.App {
+    text-align: center;
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+    margin-bottom: 40px;
+    margin: auto;
+    background-color: var(--bg-dkmd-dk);
+    color: var(--font-dkmd);
+}
+
+.body-container {
+    width: 90%;
+    margin: auto;
+}
+
+.primary-items-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: var(--bg-dkmd-lt);
+}
+
+.logo-container,
+.title-container,
+.dev-message-container {
+    width: max-content;
+    flex-shrink: 1;
+    flex: 1;
+}
+/**
+ * End general
+*/
+
+/**
+ * Scrollbar
+*/
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+/**
+ * End scrollbar
+*/
+
+/**
+ * Item
+*/
+.desc-container-sm {
+    height: 25;
+    font-size: 12px;
+    display: hidden;
+}
+
+.item-title-sm {
+    font-family: var(--elden-font);
+}
+
+.item-container-sm {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-right: 1rem;
+    border: 1px solid var(--border-dkmd);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-container-sm:hover {
+    overflow-y: visible;
+    background-color: var(--highlight-dkmd-lt);
+}
+
+.item-img-sm {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.item-title,
+.section-container-title {
+    font-family: var(--elden-font);
+}
+
+.item-img-sm:hover {
+    height: 205px;
+    width: 205px;
+    cursor: pointer;
+}
+/**
+ * End item
+*/
+
+/**
+ * Class
+*/
+.class-desc-container-sm {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starting-class-img-sm {
+    height: 400px;
+    width: 300px;
+}
+
+#starting-class-sm {
+    height: 600px;
+    width: 300px;
+}
+
+.starting-class-container-sm {
+    width: 50%;
+    height: 450px;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-button-container-sm {
+    display: flex;
+    z-index: -12;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-dkmd-lt);
+}
+/**
+ * End class
+*/
+
+/**
+ * Secondary Items
+*/
+#secondary-item-bottom {
+    border-top: 0;
+}
+
+.secondary-items-container-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-dkmd-lt);
+}
+
+.sorceries-container-sm,
+.incantations-container-sm,
+.talismans-container-sm,
+.ashes-spirits-container-sm {
+    display: block;
+}
+/**
+ * End secondary Items
+*/
+
+/**
+ * Header
+*/
+.ER,
+.BG {
+    display: inline;
+}
+
+.ER {
+    color: #ef8b09;
+    text-shadow: none;
+}
+
+.header-container {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: 75px;
+    border-bottom: 1px solid var(--border-dkmd);
+    background-color: var(--bg-dkmd-dk);
+}
+
+.logo {
+    font-family: 'Unbounded';
+    display: inline;
+    margin: auto;
+    position: absolute;
+    font-size: 32px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+    height: 40px;
+    margin-bottom: 5px;
+    /* text-shadow: 0 0 10px rgba(239, 184, 9, 0.2); */
+    margin-left: 80px;
+}
+
+.logo-container {
+    /* box-shadow: 0px 0px 10px #ef8b09; */
+    height: 50px;
+    width: 175px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-shadow: 0 0 10px rgba(239, 184, 9, 0.2);
+}
+/**
+ * End header
+*/
+
+/** 
+ * Armor
+*/
+.armors-outer-sm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-dkmd-lt);
+}
+
+.armors-inner {
+    display: flex;
+}
+
+.armors-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+/**
+ * End armor
+*/
+
+/**
+ * Weapons
+*/
+.weapons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapons-shield-container {
+    justify-content: center;
+    align-items: center;
+}
+/**
+ * End weapons
+*/
+
+/**
+ * Generate button
+*/
+.button-container {
+    border-radius: 5px;
+}
+
+.button-sm {
+    height: 200px;
+    width: 400px;
+    background-color: #ef8b09 !important;
+    border-color: #efb809 !important;
+    border: none !important;
+}
+
+.button-container-sm:hover {
+    box-shadow: 0px 0px 10px rgba(54, 54, 54, 0.5);
+}
+/**
+ * End generate button
+*/
+
+/**
+ * Dev message
+*/
+.dev-message-container,
+.dev-message-inner,
+.dev-message-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-message-inner,
+.title-inner,
+.logo-inner {
+    /* width: 200px; */
+    height: 100%;
+}
+
+.dev-message {
+    font-size: 12px;
+    max-width: 80%;
+}
+
+.dev-message-bottom {
+    font-size: 16px;
+}
+
+.dev-message-inner {
+    margin-top: 10px;
+}
+
+.dev-message-container,
+.dev-message-bottom-container {
+    height: 75px;
+    width: 100%;
+}
+/**
+ * End dev message 
+*/
+
+/**
+* --------------------- End Dark Mode ----------------------
+*/
+
+/**
+* --------------------- Light Mode ----------------------
+*/
+
+/**
+* General
+*/
+.title {
+    font-family: var(--elden-font) !important;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.App-lt {
+    text-align: center;
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+    margin-bottom: 40px;
+    margin: auto;
+    background-color: var(--bg-ltmd-lt);
+    color: var(--font-ltmd);
+}
+
+.body-container {
+    width: 90%;
+    margin: auto;
+}
+
+.primary-items-container-lt {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: var(--bg-ltmd-dk);
+}
+
+.logo-container,
+.title-container,
+.dev-message-container {
+    width: max-content;
+    flex-shrink: 1;
+    flex: 1;
+}
+/**
+ * End general
+*/
+
+/**
+ * Scrollbar
+*/
+::-webkit-scrollbar-lt {
+    background-color: #202324;
+    color: #aba499;
+}
+
+::-webkit-scrollbar-corner-lt {
+    background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb-lt {
+    background-color: #454a4d;
+}
+/**
+ * End scrollbar
+*/
+
+/**
+ * Item
+*/
+.desc-container-sm {
+    height: 50px;
+    font-size: 14px;
+}
+
+.item-title {
+    font-family: var(--elden-font);
+}
+
+.item-container-lt-sm {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-right: 1rem;
+    border: 1px solid var(--border-dkmd);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-container-lt-sm:hover {
+    overflow-y: visible;
+    background-color: var(--highlight-ltmd-dk);
+}
+
+.item-img-sm {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.item-title,
+.section-container-title {
+    font-family: var(--elden-font);
+}
+
+.item-img-sm:hover {
+    height: 205px;
+    width: 205px;
+    cursor: pointer;
+}
+/**
+ * End item
+*/
+
+/**
+ * Class
+*/
+.class-desc-container-sm {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starting-class-img-sm {
+    height: 400px;
+    width: 300px;
+}
+
+#starting-class-sm {
+    height: 600px;
+    width: 300px;
+}
+
+.starting-class-container {
+    width: 50%;
+    height: 450px;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-button-container-lt {
+    display: flex;
+    z-index: -12;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-ltmd-dk);
+}
+/**
+ * End class
+*/
+
+/**
+ * Secondary Items
+*/
+#secondary-item-bottom {
+    border-top: 0;
+}
+
+.secondary-items-container-lt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-ltmd-dk);
+}
+
+.sorceries-container,
+.incantations-container,
+.talismans-container,
+.ashes-spirits-container {
+    display: block;
+}
+/**
+ * End secondary Items
+*/
+
+/**
+ * Header
+*/
+.ER,
+.BG {
+    display: inline;
+}
+
+.ER {
+    color: #ef8b09;
+    text-shadow: none;
+}
+
+.header-container-lt {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: 75px;
+    border-bottom: 1px solid var(--border-dkmd);
+    background-color: var(--bg-ltmd-dk);
+}
+
+.logo {
+    font-family: 'Unbounded';
+    display: inline;
+    margin: auto;
+    position: absolute;
+    font-size: 32px;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-left: 80px;
+}
+
+.logo-container {
+    height: 50px;
+    width: 175px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-shadow: 0 0 10px rgba(239, 184, 9, 0.2);
+}
+/**
+ * End header
+*/
+
+/** 
+ * Armor
+*/
+.armors-outer-lt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-ltmd-dk);
+}
+
+.armors-inner {
+    display: flex;
+}
+
+.armors-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+/**
+ * End armor
+*/
+
+/**
+ * Weapons
+*/
+.weapons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapons-shield-container {
+    justify-content: center;
+    align-items: center;
+}
+/**
+ * End weapons
+*/
+
+/**
+ * Generate button
+*/
+.button-container:hover {
+    box-shadow: 0px 0px 10px rgba(54, 54, 54, 0.5);
+}
+
+.button-container {
+    border-radius: 5px;
+}
+
+.button-large {
+    height: 200px;
+    width: 400px;
+    background-color: #ef8b09 !important;
+    border-color: #efb809 !important;
+    border: none !important;
+}
+/**
+ * Dev message
+*/
+.dev-message-container,
+.dev-message-inner,
+.dev-message-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-message-inner,
+.title-inner,
+.logo-inner {
+    /* width: 200px; */
+    height: 100%;
+}
+
+.dev-message {
+    font-size: 12px;
+    max-width: 80%;
+}
+
+.dev-message-bottom {
+    font-size: 16px;
+}
+
+.dev-message-inner {
+    margin-top: 10px;
+}
+
+.dev-message-container,
+.dev-message-bottom-container {
+    height: 75px;
+    width: 100%;
+}
+/**
+ * End dev message 
+*/
+
+/**
+* --------------------- End Light Mode ----------------------
+*/
+
+/**
+* --------------------- End Small Layout ----------------------
 */
 
 /**

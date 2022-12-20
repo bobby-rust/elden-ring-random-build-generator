@@ -29,19 +29,23 @@ function App() {
     // Set up layout state
     const [layout, setLayout] = React.useState({
         isLargeLayout: true,
-        size: '-lg',
+        size: '',
     })
     // End set up layout state
 
-    // Set up button state
-    const [buttonState, setButtonState] = React.useState(true)
-    // End set up button state
+    // Set up color button state
+    const [colorButtonState, setColorButtonState] = React.useState(true)
+    // End set up color button state
+
+    // Set up layout button state
+    const [layoutButtonState, setLayoutButtonState] = React.useState(true)
+    // End set up layout button state
 
     // color Styling State
     const [darkMode, setDarkMode] = React.useState({
         isDarkMode: true,
         color: '',
-    }) //
+    })
     // End color Styling State
 
     // Set up items state
@@ -51,14 +55,12 @@ function App() {
     // Generate new build
     function generateNewBuild() {
         setBuild(generateRandomBuild())
-
-        console.log(buttonState)
     }
     // End generate new build
 
     // Handle color change
     function handleColorChange() {
-        setButtonState(!buttonState)
+        setColorButtonState(!colorButtonState)
 
         if (darkMode.isDarkMode) {
             setDarkMode({ isDarkMode: false, color: '-lt' })
@@ -70,11 +72,10 @@ function App() {
     // End handle color change
 
     // Handle layout change
-    function handleLayout() {
+    function handleLayoutChange() {
         if (layout.isLargeLayout) {
             setLayout({ isLargeLayout: false, size: '-sm' })
-        }
-        else if (!layout.isLargeLayout) {
+        } else if (!layout.isLargeLayout) {
             setLayout({ isLargeLayout: true, size: '' })
         }
     }
@@ -83,37 +84,43 @@ function App() {
     return (
         <>
             <div className='root'>
-                {!mediaState.isLargeMedia && (
-                    <div className='mobile-message'>
-                        Mobile support coming soon.
-                    </div>
-                )}
+                <div className={`App${darkMode.color}${layout.size}`}>
+                    {!mediaState.isLargeMedia && (
+                        <div className='mobile-message'>
+                            Mobile support coming soon.
+                        </div>
+                    )}
 
-                {mediaState.isLargeMedia && layout.isLargeLayout && (
-                    <div className={`App${darkMode.color}`}>
-                        <Header color={darkMode.color} handleColorChange={handleColorChange} />
+                    {mediaState.isLargeMedia && (
+                        <Header
+                            color={darkMode.color}
+                            handleColorChange={handleColorChange}
+                            handleLayoutChange={handleLayoutChange}
+                            layoutButtonState={layoutButtonState}
+                            colorButtonState={colorButtonState}
+                        />
+                    )}
+
+                    {mediaState.isLargeMedia && layout.isLargeLayout && (
                         <LargeLayout
                             color={darkMode.color}
                             build={build}
                             handleColorChange={handleColorChange}
-                            buttonState={buttonState}
                             generateNewBuild={generateNewBuild}
                         />
-                        <DevMessage />
-                    </div>
-                )}
+                    )}
 
-                {mediaState.isLargeMedia && !layout.isLargeLayout &&
-                <div className={`App${darkMode.color}${layout.size}`}>
-                    <SmallLayout
-                        color={darkMode.color}
-                        build={build}
-                        handleColorChange={handleColorChange}
-                        buttonState={buttonState}
-                        generateNewBuild={generateNewBuild}
-                     />
-                </div>}
-                <AnalyticsWrapper />
+                    {mediaState.isLargeMedia && !layout.isLargeLayout && (
+                        <SmallLayout
+                            color={darkMode.color}
+                            build={build}
+                            handleColorChange={handleColorChange}
+                            generateNewBuild={generateNewBuild}
+                        />
+                    )}
+                    <DevMessage />
+                    <AnalyticsWrapper />
+                </div>
             </div>
         </>
     )

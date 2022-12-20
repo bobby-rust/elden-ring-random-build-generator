@@ -1,7 +1,5 @@
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
-
-
 function Header(props) {
     return (
         <div className={`header-container${props.color}`}>
@@ -15,15 +13,23 @@ function Header(props) {
             </div>
             <div className='toggle-button-container'>
                 <div className='toggle-button-label'>Dark mode</div>
-                    <BootstrapSwitchButton
-                        checked={props.buttonState}
-                        onstyle='dark'
-                        offstyle='light'
-                        style='border'
-                        width='90'
-                        onChange={props.handleColorChange}
-                    />
-                </div>
+                <BootstrapSwitchButton
+                    checked={props.colorButtonState}
+                    onstyle='dark'
+                    offstyle='light'
+                    style='border'
+                    width='90'
+                    onChange={props.handleColorChange}
+                />
+                <BootstrapSwitchButton
+                    checked={props.layoutButtonState}
+                    onstyle='dark'
+                    offstyle='light'
+                    style='border'
+                    width='90'
+                    onChange={props.handleLayoutChange}
+                />
+            </div>
             <div className='title-container'>
                 <div className='title-inner'>
                     <h1 className='title'>Elden Ring Random Build Generator</h1>

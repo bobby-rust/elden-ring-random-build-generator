@@ -6,44 +6,29 @@ import Weapons from '../components/Weapons'
 import Armors from '../components/Armors'
 
 function SmallLayout(props) {
-
-
     return (
         <div className='body-container'>
             <div className={`class-button-container${props.color}`}>
-                    <div className='toggle-button-container'>
-                        <div className='toggle-button-label'>Dark mode</div>
-                        <BootstrapSwitchButton
-                            checked={props.buttonState}
-                            onstyle='dark'
-                            offstyle='light'
-                            style='border'
-                            width='90'
-                            onChange={props.handleColorChange}
-                        />
-                    </div>
-                    <StartingClass
-                        starting_class={props.build['starting_class']}
-                    />
-                    <div className='button-container'>
-                        <Button
-                            className='button-large'
-                            onClick={props.generateNewBuild}
-                            variant='danger'
-                        >
-                            GENERATE NEW BUILD
-                        </Button>
-                    </div>
+                <StartingClass starting_class={props.build['starting_class']} />
+                <div className='button-container'>
+                    <Button
+                        className='button-large'
+                        onClick={props.generateNewBuild}
+                        variant='danger'
+                    >
+                        GENERATE NEW BUILD
+                    </Button>
                 </div>
-                <Weapons
-                    weapons={props.build['weapons']}
-                    shields={props.build['shields']}
-                    color={props.color}
-                />
-                <Armors armor={props.build['armor']} color={props.color} />
-                <SecondaryItems color={props.color} build={props.build} />
+            </div>
+            <Weapons
+                weapons={props.build['weapons']}
+                shields={props.build['shields']}
+                color={props.color}
+            />
+            <Armors armor={props.build['armor']} color={props.color} />
+            <SecondaryItems color={props.color} build={props.build} />
         </div>
     )
 }
 
-export default SmallLayout;
+export default SmallLayout
