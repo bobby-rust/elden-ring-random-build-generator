@@ -5,26 +5,32 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import generateRandomBuild from './functions/generateRandomBuild'
 import AnalyticsWrapper from './components/AnalyticsWrapper'
 import LargeLayout from './layouts/LargeLayout'
+import SmallLayout from './layouts/SmallLayout'
 import DevMessage from './components/DevMessage'
 
 // add an option to allow the user to keep most of the build but regenerate one item of their choosing.
 
 // Armor piece Redmane knight gauntlets id: 17f693ced0bl0i0oh402gmm7bjbdty description is null
 
-// Could create a random optimized build by searching for a weapon that does the most damage and talismans/incants/etc 
+// Could create a random optimized build by searching for a weapon that does the most damage and talismans/incants/etc
 // that buff that damage type the most.
 // Could do early game, mid game, late game by sorting the weapons by their damage and type and
 // Sorting by required attributes for early/mid/late game
 
 function App() {
     // Set up media state
-    const [mediaState, setMediaState] = React.useState({ isLargeMedia: window.matchMedia("(min-width: 1200px)").matches })
-    const handler = e => setMediaState({ isLargeMedia: e.matches })
-    window.matchMedia("(min-width: 1200px)").addEventListener('change', handler);
+    const [mediaState, setMediaState] = React.useState({
+        isLargeMedia: window.matchMedia('(min-width: 1200px)').matches,
+    })
+    const handler = (e) => setMediaState({ isLargeMedia: e.matches })
+    window.matchMedia('(min-width: 1200px)').addEventListener('change', handler)
     // End set up media state
 
     // Set up layout state
-    const [layout, setLayout] = React.useState({ isLargeLayout: true, size: "-lg" });
+    const [layout, setLayout] = React.useState({
+        isLargeLayout: true,
+        size: '-lg',
+    })
     // End set up layout state
 
     // Set up button state
@@ -32,8 +38,10 @@ function App() {
     // End set up button state
 
     // color Styling State
-    const [isLargeView, setIsLargeView] = React.useState(true)
-    const [darkMode, setDarkMode] = React.useState({ isDarkMode: true, color: "" }) // 
+    const [darkMode, setDarkMode] = React.useState({
+        isDarkMode: true,
+        color: '',
+    }) //
     // End color Styling State
 
     // Set up items state
@@ -48,36 +56,64 @@ function App() {
     }
     // End generate new build
 
-    // Handle color button toggle
+    // Handle color change
     function handleColorChange() {
-        setButtonState(!buttonState);
-        
+        setButtonState(!buttonState)
+
         if (darkMode.isDarkMode) {
-            setDarkMode({ isDarkMode: false, color: "-lt" })
+            setDarkMode({ isDarkMode: false, color: '-lt' })
         }
         if (!darkMode.isDarkMode) {
-            setDarkMode({ isDarkMode: true, color: "" })
+            setDarkMode({ isDarkMode: true, color: '' })
         }
     }
+    // End handle color change
 
-    return (<>
-        <div className='root'>
-            {!mediaState.isLargeMedia && <div className="mobile-message">Mobile support coming soon.</div>}
+    // Handle layout change
+    function handleLayout() {
+        if (layout.isLargeLayout) {
+            setLayout({ isLargeLayout: false, size: '-sm' })
+        }
+        else if (!layout.isLargeLayout) {
+            setLayout({ isLargeLayout: true, size: '' })
+        }
+    }
+    // End handle layout change
 
-                {mediaState.isLargeMedia && isLargeLayout &&
-                <div className={`App${darkMode.color}`}>
-                    <Header color={darkMode.color}/>
-                    <LargeLayout color={darkMode.color} build={build} handleColorChange={handleColorChange} buttonState={buttonState} generateNewBuild={generateNewBuild} />
-                    <DevMessage />
-                    <AnalyticsWrapper />
+    return (
+        <>
+            <div className='root'>
+                {!mediaState.isLargeMedia && (
+                    <div className='mobile-message'>
+                        Mobile support coming soon.
+                    </div>
+                )}
+
+                {mediaState.isLargeMedia && layout.isLargeLayout && (
+                    <div className={`App${darkMode.color}`}>
+                        <Header color={darkMode.color} handleColorChange={handleColorChange} />
+                        <LargeLayout
+                            color={darkMode.color}
+                            build={build}
+                            handleColorChange={handleColorChange}
+                            buttonState={buttonState}
+                            generateNewBuild={generateNewBuild}
+                        />
+                        <DevMessage />
+                    </div>
+                )}
+
+                {mediaState.isLargeMedia && !layout.isLargeLayout &&
+                <div className={`App${darkMode.color}${layout.size}`}>
+                    <SmallLayout
+                        color={darkMode.color}
+                        build={build}
+                        handleColorChange={handleColorChange}
+                        buttonState={buttonState}
+                        generateNewBuild={generateNewBuild}
+                     />
                 </div>}
-
-                {/* {mediaState.isLargeMedia && !isLargeLayout &&
-                <div className={`App${darkMode.color}${}`}
-                } */}
-                    
-                
-
+                <AnalyticsWrapper />
             </div>
         </>
     )
