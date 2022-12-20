@@ -5,20 +5,20 @@ import Ashes from './Ashes'
 import Spirits from './Spirits'
 
 function SecondaryItems(props) {
-    const color = props.color
+    const CSS = props.CSS
     return (
         <>
-            <div className={`secondary-items-container${color}`}>
-                <Sorceries sorcs={props.build['sorcs']} color={color} />
-                <Incantations incants={props.build['incants']} color={color} />
-                <Talismans talismans={props.build['talismans']} color={color} />
-                <div className='ashes-spirits-container'>
-                    <Ashes ashes={props.build['ashes']} color={color} />
-                    <Spirits spirits={props.build['spirits']} color={color} />
-                </div>
+        <div className={`secondary-items-container${CSS}`}>
+            <Sorceries sorcs={props.build['sorcs']} CSS={CSS}/>
+            <Incantations incants={props.build['incants']} CSS={CSS}/>
+            <Talismans talismans={props.build['talismans']} CSS={CSS}/>
+            <div className='ashes-spirits-container'>
+                <Ashes ashes={props.build['ashes']} CSS={CSS}/>
+                <Spirits spirits={props.build['spirits']} CSS={CSS} />
             </div>
+        </div>
         </>
     )
 }
 
-export default SecondaryItems
+export default SecondaryItems;

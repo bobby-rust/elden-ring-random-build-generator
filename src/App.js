@@ -11,25 +11,20 @@ import DevMessage from './components/DevMessage'
 
 // Armor piece Redmane knight gauntlets id: 17f693ced0bl0i0oh402gmm7bjbdty description is null
 
-// Could create a random optimized build by searching for a weapon that does the most damage and talismans/incants/etc
+// Could create a random optimized build by searching for a weapon that does the most damage and talismans/incants/etc 
 // that buff that damage type the most.
 // Could do early game, mid game, late game by sorting the weapons by their damage and type and
 // Sorting by required attributes for early/mid/late game
 
 function App() {
     // Set up media state
-    const [mediaState, setMediaState] = React.useState({
-        isLargeMedia: window.matchMedia('(min-width: 1200px)').matches,
-    })
-    const handler = (e) => setMediaState({ isLargeMedia: e.matches })
-    window.matchMedia('(min-width: 1200px)').addEventListener('change', handler)
+    const [mediaState, setMediaState] = React.useState({ isLargeMedia: window.matchMedia("(min-width: 1200px)").matches })
+    const handler = e => setMediaState({ isLargeMedia: e.matches })
+    window.matchMedia("(min-width: 1200px)").addEventListener('change', handler);
     // End set up media state
 
     // Set up layout state
-    const [layout, setLayout] = React.useState({
-        isLargeLayout: true,
-        size: '-lg',
-    })
+    const [layout, setLayout] = React.useState({ isLargeLayout: true, size: "-lg" });
     // End set up layout state
 
     // Set up button state
@@ -38,10 +33,7 @@ function App() {
 
     // color Styling State
     const [isLargeView, setIsLargeView] = React.useState(true)
-    const [darkMode, setDarkMode] = React.useState({
-        isDarkMode: true,
-        color: '',
-    }) //
+    const [darkMode, setDarkMode] = React.useState({ isDarkMode: true, color: "" }) // 
     // End color Styling State
 
     // Set up items state
@@ -58,43 +50,34 @@ function App() {
 
     // Handle color button toggle
     function handleColorChange() {
-        setButtonState(!buttonState)
-
+        setButtonState(!buttonState);
+        
         if (darkMode.isDarkMode) {
-            setDarkMode({ isDarkMode: false, color: '-lt' })
+            setDarkMode({ isDarkMode: false, color: "-lt" })
         }
         if (!darkMode.isDarkMode) {
-            setDarkMode({ isDarkMode: true, color: '' })
+            setDarkMode({ isDarkMode: true, color: "" })
         }
     }
 
-    return (
-        <>
-            <div className='root'>
-                {!mediaState.isLargeMedia && (
-                    <div className='mobile-message'>
-                        Mobile support coming soon.
-                    </div>
-                )}
+    return (<>
+        <div className='root'>
+            {!mediaState.isLargeMedia && <div className="mobile-message">Mobile support coming soon.</div>}
 
-                {mediaState.isLargeMedia && layout.isLargeLayout && (
-                    <div className={`App${darkMode.color}`}>
-                        <Header color={darkMode.color} />
-                        <LargeLayout
-                            color={darkMode.color}
-                            build={build}
-                            handleColorChange={handleColorChange}
-                            buttonState={buttonState}
-                            generateNewBuild={generateNewBuild}
-                        />
-                        <DevMessage />
-                    </div>
-                )}
+                {mediaState.isLargeMedia && isLargeLayout &&
+                <div className={`App${darkMode.color}`}>
+                    <Header color={darkMode.color}/>
+                    <LargeLayout color={darkMode.color} build={build} handleColorChange={handleColorChange} buttonState={buttonState} generateNewBuild={generateNewBuild} />
+                    <DevMessage />
+                    <AnalyticsWrapper />
+                </div>}
 
                 {/* {mediaState.isLargeMedia && !isLargeLayout &&
                 <div className={`App${darkMode.color}${}`}
-            } */}
-                <AnalyticsWrapper />
+                } */}
+                    
+                
+
             </div>
         </>
     )

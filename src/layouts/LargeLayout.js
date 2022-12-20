@@ -6,45 +6,31 @@ import Weapons from '../components/Weapons'
 import Armors from '../components/Armors'
 
 function LargeLayout(props) {
+
     // Need buttonstate, css, generate props.build func, props.build
     return (
         <>
             <div className='body-container'>
-                <div className={`class-button-container${props.color}`}>
+                <div className={`class-button-container${props.CSS}`}>
                     <div className='toggle-button-container'>
-                        <div className='toggle-button-label'>Dark mode</div>
-                        <BootstrapSwitchButton
-                            checked={props.buttonState}
-                            onstyle='dark'
-                            offstyle='light'
-                            style='border'
-                            width='90'
-                            onChange={props.handleColorChange}
-                        />
+                        <div className='toggle-button-label'>
+                            Dark mode
+                        </div>
+                        <BootstrapSwitchButton checked={props.buttonState} onstyle='dark' offstyle='light' style='border' width='90' onChange={props.handleColorChange} />
                     </div>
-                    <StartingClass
-                        starting_class={props.build['starting_class']}
-                    />
+                    <StartingClass starting_class={props.build['starting_class']} />
                     <div className='button-container'>
-                        <Button
-                            className='button-large'
-                            onClick={props.generateNewBuild}
-                            variant='danger'
-                        >
+                        <Button className='button-large' onClick={props.generateNewBuild} variant='danger'>
                             GENERATE NEW BUILD
                         </Button>
                     </div>
                 </div>
-                <Weapons
-                    weapons={props.build['weapons']}
-                    shields={props.build['shields']}
-                    color={props.color}
-                />
-                <Armors armor={props.build['armor']} color={props.color} />
-                <SecondaryItems color={props.color} build={props.build} />
+                <Weapons weapons={props.build['weapons']} shields={props.build['shields']} CSS={props.CSS} />
+                <Armors armor={props.build['armor']} CSS={props.CSS}/>
+                <SecondaryItems CSS={props.CSS} build={props.build} />
             </div>
         </>
     )
 }
 
-export default LargeLayout
+export default LargeLayout;
