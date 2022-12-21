@@ -5,10 +5,19 @@ function Incantations(props) {
     return (
         <>
             <div className='incantations-container'>
-                <h1 className='section-container-title'>Incantations</h1>
+                <h1 className={`section-container-title${props.size}`}>
+                    Incantations
+                </h1>
                 {props.incants.map((incant, idx) => {
                     // console.log(incant)
-                    return <Item item={incant} color={props.color} key={v4()} />
+                    return (
+                        <Item
+                            item={incant}
+                            color={props.color}
+                            key={v4()}
+                            size={props.size}
+                        />
+                    )
                 })}
             </div>
         </>

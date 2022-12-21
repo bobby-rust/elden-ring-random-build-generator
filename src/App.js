@@ -64,8 +64,7 @@ function App() {
 
         if (darkMode.isDarkMode) {
             setDarkMode({ isDarkMode: false, color: '-lt' })
-        }
-        if (!darkMode.isDarkMode) {
+        } else if (!darkMode.isDarkMode) {
             setDarkMode({ isDarkMode: true, color: '' })
         }
     }
@@ -73,6 +72,8 @@ function App() {
 
     // Handle layout change
     function handleLayoutChange() {
+        setLayoutButtonState(!layoutButtonState)
+
         if (layout.isLargeLayout) {
             setLayout({ isLargeLayout: false, size: '-sm' })
         } else if (!layout.isLargeLayout) {
@@ -106,7 +107,9 @@ function App() {
                             color={darkMode.color}
                             build={build}
                             handleColorChange={handleColorChange}
+                            handleLayoutChange={handleLayoutChange}
                             generateNewBuild={generateNewBuild}
+                            size={layout.size}
                         />
                     )}
 
@@ -115,7 +118,9 @@ function App() {
                             color={darkMode.color}
                             build={build}
                             handleColorChange={handleColorChange}
+                            handleLayoutChange={handleLayoutChange}
                             generateNewBuild={generateNewBuild}
+                            size={layout.size}
                         />
                     )}
                     <DevMessage />

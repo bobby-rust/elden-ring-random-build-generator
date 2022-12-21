@@ -21,6 +21,9 @@ function Header(props) {
                     width='90'
                     onChange={props.handleColorChange}
                 />
+            </div>
+            <div className='toggle-button-container'>
+                <div className='toggle-button-label'>Large Layout</div>
                 <BootstrapSwitchButton
                     checked={props.layoutButtonState}
                     onstyle='dark'
@@ -32,7 +35,9 @@ function Header(props) {
             </div>
             <div className='title-container'>
                 <div className='title-inner'>
-                    <h1 className='title'>Elden Ring Random Build Generator</h1>
+                    <h1 className='header-title'>
+                        Elden Ring Random Build Generator
+                    </h1>
                 </div>
             </div>
             <div className='dev-message-container'>

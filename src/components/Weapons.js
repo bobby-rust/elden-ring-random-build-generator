@@ -5,9 +5,13 @@ import { v4 } from 'uuid'
 function Weapons(props) {
     return (
         <>
-            <div className={`primary-items-container${props.color}`}>
-                <div className='weapons-outer'>
-                    <h1 className='section-container-title'>Weapons</h1>
+            <div
+                className={`primary-items-container${props.color}${props.size}`}
+            >
+                <div className={`weapons-outer${props.size}`}>
+                    <h1 className={`section-container-title${props.size}`}>
+                        Weapons
+                    </h1>
                     <div className='weapons-container'>
                         {props.weapons.map((weapon, idx) => {
                             return (
@@ -15,14 +19,21 @@ function Weapons(props) {
                                     item={weapon}
                                     color={props.color}
                                     key={v4()}
+                                    size={props.size}
                                 />
                             )
                         })}
                     </div>
                 </div>
-                <div className='shield-outer'>
-                    <h1 className='section-container-title'>Shield</h1>
-                    <Shield shields={props.shields} color={props.color} />
+                <div className={`shield-outer${props.size}`}>
+                    <h1 className={`section-container-title${props.size}`}>
+                        Shield
+                    </h1>
+                    <Shield
+                        shields={props.shields}
+                        color={props.color}
+                        size={props.size}
+                    />
                 </div>
             </div>
         </>

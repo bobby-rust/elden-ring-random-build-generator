@@ -9,7 +9,9 @@ function LargeLayout(props) {
     return (
         <>
             <div className='body-container'>
-                <div className={`class-button-container${props.color}`}>
+                <div
+                    className={`class-button-container${props.color}${props.size}`}
+                >
                     <StartingClass
                         starting_class={props.build['starting_class']}
                     />
@@ -27,9 +29,18 @@ function LargeLayout(props) {
                     weapons={props.build['weapons']}
                     shields={props.build['shields']}
                     color={props.color}
+                    size={props.size}
                 />
-                <Armors armor={props.build['armor']} color={props.color} />
-                <SecondaryItems color={props.color} build={props.build} />
+                <Armors
+                    armor={props.build['armor']}
+                    color={props.color}
+                    size={props.size}
+                />
+                <SecondaryItems
+                    color={props.color}
+                    build={props.build}
+                    size={props.size}
+                />
             </div>
         </>
     )
