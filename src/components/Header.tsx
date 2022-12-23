@@ -1,6 +1,15 @@
+import React from 'react'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
-function Header(props) {
+type HeaderProps = {
+    color: string,
+    colorButtonState: boolean,
+    layoutButtonState: boolean,
+    handleColorChange: () => void,
+    handleLayoutChange: () => void,
+}
+
+function Header(props: HeaderProps) {
     return (
         <div className={`header-container${props.color}`}>
             <div className='logo-container'>
@@ -18,7 +27,7 @@ function Header(props) {
                     onstyle='dark'
                     offstyle='light'
                     style='border'
-                    width='90'
+                    width={90}
                     onChange={props.handleColorChange}
                 />
             </div>
@@ -29,7 +38,7 @@ function Header(props) {
                     onstyle='dark'
                     offstyle='light'
                     style='border'
-                    width='90'
+                    width={90}
                     onChange={props.handleLayoutChange}
                 />
             </div>

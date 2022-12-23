@@ -1,7 +1,9 @@
-import Item from '../components/Item'
+import Item from './Item'
 import { v4 } from 'uuid'
+import React from 'react'
+import{ BuildSetProps, BuildItem }from '../types/ItemTypes'
 
-function Armors(props) {
+function Armors(props: BuildSetProps) {
     return (
         <>
             <div className={`armors-outer${props.color}${props.size}`}>
@@ -9,7 +11,7 @@ function Armors(props) {
                     Armor
                 </h1>
                 <div className='armors-inner'>
-                    {props.armor.map((currArmor, idx) => {
+                    {props.items.map((currArmor: BuildItem) => {
                         return (
                             <div
                                 className={`armors-container${props.size}`}

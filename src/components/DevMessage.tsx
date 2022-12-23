@@ -1,6 +1,6 @@
+import React from "react";
 
-
-function DevMessage(props) {
+function DevMessage() {
 
     return (
         <>

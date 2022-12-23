@@ -1,15 +1,16 @@
-import Item from '../components/Item'
+import Item from './Item'
 import { v4 } from 'uuid'
+import React from 'react'
+import { BuildItem, BuildSetProps } from '../types/ItemTypes'
 
-function Incantations(props) {
+function Incantations(props: BuildSetProps) {
     return (
         <>
             <div className='incantations-container'>
                 <h1 className={`section-container-title${props.size}`}>
                     Incantations
                 </h1>
-                {props.incants.map((incant, idx) => {
-                    // console.log(incant)
+                {props.items.map((incant: BuildItem) => {
                     return (
                         <Item
                             item={incant}

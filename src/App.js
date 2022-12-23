@@ -1,12 +1,12 @@
 import './App.css'
 import React from 'react'
-import Header from './components/Header'
+import Header from './components/Header.tsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import generateRandomBuild from './functions/generateRandomBuild'
 import AnalyticsWrapper from './components/AnalyticsWrapper'
 import LargeLayout from './layouts/LargeLayout'
 import SmallLayout from './layouts/SmallLayout'
-import DevMessage from './components/DevMessage'
+import DevMessage from './components/DevMessage.tsx'
 
 // add an option to allow the user to keep most of the build but regenerate one item of their choosing.
 

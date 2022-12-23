@@ -1,11 +1,13 @@
-import Item from '../components/Item'
+import Item from './Item'
 import { v4 } from 'uuid'
+import React from 'react'
+import { BuildSetProps, BuildItem } from '../types/ItemTypes'
 
-function Ashes(props) {
+function Ashes(props: BuildSetProps) {
     return (
         <div className='ashes-container'>
             <h1 className={`section-container-title${props.size}`}>Ashes</h1>
-            {props.ashes.map((ash, idx) => {
+            {props.items.map((ash: BuildItem) => {
                 return (
                     <Item
                         item={ash}

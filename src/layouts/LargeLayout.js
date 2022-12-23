@@ -32,13 +32,13 @@ function LargeLayout(props) {
                     size={props.size}
                 />
                 <Armors
-                    armor={props.build['armor']}
+                    items={props.build['armor']}
                     color={props.color}
                     size={props.size}
                 />
                 <SecondaryItems
                     color={props.color}
-                    build={props.build}
+                    items={props.build}
                     size={props.size}
                 />
             </div>

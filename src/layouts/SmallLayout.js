@@ -44,14 +44,14 @@ function SmallLayout(props) {
                 <div className='armor-secondary-items-container-sm'>
                     <div className='armors-container-sm'>
                         <Armors
-                            armor={props.build['armor']}
+                            items={props.build['armor']}
                             color={props.color}
                             size={props.size}
                         />
                     </div>
                     <SecondaryItems
                         color={props.color}
-                        build={props.build}
+                        items={props.build}
                         size={props.size}
                     />
                 </div>

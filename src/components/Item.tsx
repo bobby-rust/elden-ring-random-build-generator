@@ -1,4 +1,7 @@
-function Item(props) {
+import React from 'react'
+import { BuildItemProps } from '../types/ItemTypes'
+
+function Item(props: BuildItemProps) {
     return (
         <div className={`item-container${props.color}${props.size}`}>
             <h4 className={`item-title${props.size}`}>{props.item.name}</h4>
@@ -20,4 +23,4 @@ function Item(props) {
     )
 }
 
-export default Item
+export default Item;

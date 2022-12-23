@@ -1,16 +1,18 @@
-import Item from '../components/Item'
 import { v4 } from 'uuid'
+import React from 'react'
+import Item from './Item'
+import { BuildSetProps, BuildItem } from '../types/ItemTypes'
 
-function Talismans(props) {
+function Sorceries(props: BuildSetProps) {
     return (
-        <div className='talismans-container'>
+        <div className='sorceries-container'>
             <h1 className={`section-container-title${props.size}`}>
-                Talismans
+                Sorceries
             </h1>
-            {props.talismans.map((talisman, idx) => {
+            {props.items.map((sorc: BuildItem) => {
                 return (
                     <Item
-                        item={talisman}
+                        item={sorc}
                         color={props.color}
                         key={v4()}
                         size={props.size}
@@ -21,4 +23,4 @@ function Talismans(props) {
     )
 }
 
-export default Talismans
+export default Sorceries

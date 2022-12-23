@@ -1,8 +1,9 @@
-import Item from '../components/Item'
+import Item from './Item'
 import Shield from '../components/Shield'
 import { v4 } from 'uuid'
+import React from 'react'
 
-function Weapons(props) {
+function Weapons(props: any) {
     return (
         <>
             <div
@@ -13,7 +14,7 @@ function Weapons(props) {
                         Weapons
                     </h1>
                     <div className='weapons-container'>
-                        {props.weapons.map((weapon, idx) => {
+                        {props.weapons.map((weapon: any) => {
                             return (
                                 <Item
                                     item={weapon}
@@ -30,7 +31,7 @@ function Weapons(props) {
                         Shield
                     </h1>
                     <Shield
-                        shields={props.shields}
+                        items={props.shields}
                         color={props.color}
                         size={props.size}
                     />

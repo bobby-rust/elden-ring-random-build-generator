@@ -3,35 +3,45 @@ import Incantations from './Incantations'
 import Sorceries from './Sorceries'
 import Ashes from './Ashes'
 import Spirits from './Spirits'
+import React from 'react'
+import { BuildItem, BuildSetProps } from '../types/ItemTypes'
 
-function SecondaryItems(props) {
+function SecondaryItems(props: BuildSetProps) {
     const color = props.color
+    const _items = props.items
+
+    if (!("sorcs" in _items)) return
+    if (!("incants" in _items)) return
+    if (!("talismans" in _items)) return
+    if (!("ashes" in _items)) return
+    if (!("spirits" in _items)) return
+    
     return (
         <>
             <div className={`secondary-items-container${color}${props.size}`}>
                 <Sorceries
-                    sorcs={props.build['sorcs']}
+                    items={_items["sorcs"] as BuildItem[]}
                     color={color}
                     size={props.size}
                 />
                 <Incantations
-                    incants={props.build['incants']}
+                    items={_items['incants'] as BuildItem[]}
                     color={color}
                     size={props.size}
                 />
                 <Talismans
-                    talismans={props.build['talismans']}
+                    items={_items['talismans'] as BuildItem[]}
                     color={color}
                     size={props.size}
                 />
                 <div className='ashes-spirits-container'>
                     <Ashes
-                        ashes={props.build['ashes']}
+                        items={_items['ashes'] as BuildItem[]}
                         color={color}
                         size={props.size}
                     />
                     <Spirits
-                        spirits={props.build['spirits']}
+                        items={_items['spirits'] as BuildItem[]}
                         color={color}
                         size={props.size}
                     />

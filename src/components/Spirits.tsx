@@ -1,11 +1,13 @@
-import Item from '../components/Item'
+import Item from './Item'
 import { v4 } from 'uuid'
+import React from 'react'
+import { BuildItem, BuildSetProps } from '../types/ItemTypes'
 
-function Spirits(props) {
+function Spirits(props: BuildSetProps) {
     return (
         <div className='spirits-container'>
             {/* <h2>Spirits</h2> */}
-            {props.spirits.map((spirit, idx) => {
+            {props.items.map((spirit: BuildItem, idx: number) => {
                 return (
                     <Item
                         item={spirit}

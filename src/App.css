@@ -594,6 +594,11 @@ body {
     flex-shrink: 1;
     flex: 1;
 }
+
+.App-sm {
+    color: var(--font-dkmd);
+    background-color: var(--bg-dkmd-lt)
+}
 /**
  * End general
 */
