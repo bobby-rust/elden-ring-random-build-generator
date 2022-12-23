@@ -703,19 +703,21 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: var(--bg-dkmd-dk);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    flex: 1;
+    border-radius: 5px;
+    /* flex: 1; */
 }
 
 .armor-secondary-items-container-sm {
     display: flex;
+    height: 80%;
     width: 50%;
-    height: 100% !important;
+    margin: auto;
     flex-direction: column;
-    align-items: stretch;
-    row-gap: 20px;
-    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .class-button-container-sm {
@@ -724,11 +726,9 @@ body {
     align-items: center;
     /* justify-content: space-evenly; */
     border-radius: 5px;
-    height: 80vh;
-    width: 90vw;
     flex-direction: column;
     flex: 1;
-    justify-content: stretch;
+    height: 100%;
 }
 
 .class-button-inner {
@@ -739,15 +739,16 @@ body {
 
 .class-weapons-container-sm {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 50%;
-    min-height: 100%;
-    flex: 1;
+    height: 100%;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .weapons-container-sm {
-    height: 400px;
-    flex-basis: 50%;
+    height: 100%;
 }
 
 .weapons-container-sm .item-container-sm {
@@ -779,10 +780,10 @@ body {
 
 .armors-container-sm {
     display: flex;
-    flex-basis: auto;
-    width: 100%;
-    height: 100%;
-    align-self: stretch;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
 }
 
 /**
@@ -795,13 +796,13 @@ body {
     background-color: var(--bg-dkmd-lt);
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    width: 95%;
+    width: 90%;
+    height: 80%;
     flex-basis: auto;
     flex-grow: 4;
     align-self: stretch;
     top: 0;
     left: 0;
-    position: absolute;
 }
 
 .sorceries-container-sm,

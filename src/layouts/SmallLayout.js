@@ -31,6 +31,7 @@ function SmallLayout(props) {
                                 </Button>
                             </div>
                         </div>
+                    </div>
                         <div className='weapons-container-sm'>
                             <Weapons
                                 weapons={props.build['weapons']}
@@ -39,7 +40,6 @@ function SmallLayout(props) {
                                 size={props.size}
                             />
                         </div>
-                    </div>
                 </div>
                 <div className='armor-secondary-items-container-sm'>
                     <div className='armors-container-sm'>
