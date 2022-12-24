@@ -10,17 +10,17 @@ function SecondaryItems(props: BuildSetProps) {
     const color = props.color
     const _items = props.items
 
-    if (!("sorcs" in _items)) return
-    if (!("incants" in _items)) return
-    if (!("talismans" in _items)) return
-    if (!("ashes" in _items)) return
-    if (!("spirits" in _items)) return
-    
+    if (!('sorcs' in _items)) return
+    if (!('incants' in _items)) return
+    if (!('talismans' in _items)) return
+    if (!('ashes' in _items)) return
+    if (!('spirits' in _items)) return
+
     return (
         <>
-            <div className={`secondary-items-container${color}${props.size}`}>
+            <div>
                 <Sorceries
-                    items={_items["sorcs"] as BuildItem[]}
+                    items={_items['sorcs'] as BuildItem[]}
                     color={color}
                     size={props.size}
                 />
@@ -34,7 +34,7 @@ function SecondaryItems(props: BuildSetProps) {
                     color={color}
                     size={props.size}
                 />
-                <div className='ashes-spirits-container'>
+                <div>
                     <Ashes
                         items={_items['ashes'] as BuildItem[]}
                         color={color}

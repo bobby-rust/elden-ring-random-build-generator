@@ -1,4 +1,5 @@
 import './App.css'
+import './styles/header.css'
 import React from 'react'
 import Header from './components/Header.tsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -16,6 +17,12 @@ import DevMessage from './components/DevMessage.tsx'
 // that buff that damage type the most.
 // Could do early game, mid game, late game by sorting the weapons by their damage and type and
 // Sorting by required attributes for early/mid/late game
+
+// The components' styles should not be linked in any way to one specific layout
+// It should be the layout's responsibility to style its items independently
+// This is going to be a huge CSS refactor. Buckle up.
+// Need to do this smart and plan out the process.
+// I'm going to back up the CSS file to use as a reference and start clean
 
 function App() {
     // Set up media state
@@ -73,7 +80,6 @@ function App() {
     // Handle layout change
     function handleLayoutChange() {
         setLayoutButtonState(!layoutButtonState)
-
         if (layout.isLargeLayout) {
             setLayout({ isLargeLayout: false, size: '-sm' })
         } else if (!layout.isLargeLayout) {
@@ -82,51 +88,45 @@ function App() {
     }
     // End handle layout change
 
+    // Handle mobile user
+    if (!mediaState.isLargeMedia) {
+        return <div className='mobile-message'>Mobile support coming soon.</div>
+    }
+    // End handle mobile user
+
     return (
         <>
-            <div className='root'>
-                <div className={`App${darkMode.color}${layout.size}`}>
-                    {!mediaState.isLargeMedia && (
-                        <div className='mobile-message'>
-                            Mobile support coming soon.
-                        </div>
-                    )}
+            <Header
+                color={darkMode.color}
+                handleColorChange={handleColorChange}
+                handleLayoutChange={handleLayoutChange}
+                layoutButtonState={layoutButtonState}
+                colorButtonState={colorButtonState}
+            />
 
-                    {mediaState.isLargeMedia && (
-                        <Header
-                            color={darkMode.color}
-                            handleColorChange={handleColorChange}
-                            handleLayoutChange={handleLayoutChange}
-                            layoutButtonState={layoutButtonState}
-                            colorButtonState={colorButtonState}
-                        />
-                    )}
+            {layout.isLargeLayout && (
+                <LargeLayout
+                    color={darkMode.color}
+                    build={build}
+                    handleColorChange={handleColorChange}
+                    handleLayoutChange={handleLayoutChange}
+                    generateNewBuild={generateNewBuild}
+                    size={layout.size}
+                />
+            )}
 
-                    {mediaState.isLargeMedia && layout.isLargeLayout && (
-                        <LargeLayout
-                            color={darkMode.color}
-                            build={build}
-                            handleColorChange={handleColorChange}
-                            handleLayoutChange={handleLayoutChange}
-                            generateNewBuild={generateNewBuild}
-                            size={layout.size}
-                        />
-                    )}
-
-                    {mediaState.isLargeMedia && !layout.isLargeLayout && (
-                        <SmallLayout
-                            color={darkMode.color}
-                            build={build}
-                            handleColorChange={handleColorChange}
-                            handleLayoutChange={handleLayoutChange}
-                            generateNewBuild={generateNewBuild}
-                            size={layout.size}
-                        />
-                    )}
-                    <DevMessage />
-                    <AnalyticsWrapper />
-                </div>
-            </div>
+            {!layout.isLargeLayout && (
+                <SmallLayout
+                    color={darkMode.color}
+                    build={build}
+                    handleColorChange={handleColorChange}
+                    handleLayoutChange={handleLayoutChange}
+                    generateNewBuild={generateNewBuild}
+                    size={layout.size}
+                />
+            )}
+            <DevMessage />
+            <AnalyticsWrapper />
         </>
     )
 }

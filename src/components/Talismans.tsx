@@ -5,10 +5,8 @@ import { BuildSetProps, BuildItem } from '../types/ItemTypes'
 
 function Talismans(props: BuildSetProps) {
     return (
-        <div className='talismans-container'>
-            <h1 className={`section-container-title${props.size}`}>
-                Talismans
-            </h1>
+        <div>
+            <h1>Talismans</h1>
             {props.items.map((talisman: BuildItem) => {
                 return (
                     <Item

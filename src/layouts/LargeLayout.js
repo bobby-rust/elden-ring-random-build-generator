@@ -8,7 +8,7 @@ function LargeLayout(props) {
     // Need buttonstate, css, generate props.build func, props.build
     return (
         <>
-            <div className='body-container'>
+            <div className='body-container-lg'>
                 <div
                     className={`class-button-container${props.color}${props.size}`}
                 >

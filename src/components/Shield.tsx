@@ -4,9 +4,9 @@ import { BuildItem, BuildSetProps } from '../types/ItemTypes'
 import Item from './Item'
 
 function Shields(props: BuildSetProps) {
-    console.log(props.items)
     return (
-        <div className='shield-container'>
+        <div>
+            <h1>Shield</h1>
             {props.items.map((item: BuildItem) => {
                 return (
                     <Item

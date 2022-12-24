@@ -5,9 +5,9 @@ import { BuildItem, BuildSetProps } from '../types/ItemTypes'
 
 function Spirits(props: BuildSetProps) {
     return (
-        <div className='spirits-container'>
+        <div>
             {/* <h2>Spirits</h2> */}
-            {props.items.map((spirit: BuildItem, idx: number) => {
+            {props.items.map((spirit: BuildItem) => {
                 return (
                     <Item
                         item={spirit}

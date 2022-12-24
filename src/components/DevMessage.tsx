@@ -1,14 +1,13 @@
-import React from "react";
+import React from 'react'
 
 function DevMessage() {
-
     return (
         <>
-            <div className='dev-message-bottom-container'>
-                <p className='dev-message-bottom'>
+            <div>
+                <p>
                     This tool is in development. Some features may not work.
-                    There may be missing and/or incorrect data. Submit an
-                    issue or make a feature request{' '}
+                    There may be missing and/or incorrect data. Submit an issue
+                    or make a feature request{' '}
                     <a
                         href='https://github.com/bobby-rust/elden-ring-random-build-generator/issues'
                         target='_blank'
@@ -23,4 +22,4 @@ function DevMessage() {
     )
 }
 
-export default DevMessage;
+export default DevMessage

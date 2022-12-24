@@ -6,10 +6,8 @@ import { BuildItem, BuildSetProps } from '../types/ItemTypes'
 function Incantations(props: BuildSetProps) {
     return (
         <>
-            <div className='incantations-container'>
-                <h1 className={`section-container-title${props.size}`}>
-                    Incantations
-                </h1>
+            <div>
+                <h1>Incantations</h1>
                 {props.items.map((incant: BuildItem) => {
                     return (
                         <Item

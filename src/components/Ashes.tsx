@@ -5,8 +5,8 @@ import { BuildSetProps, BuildItem } from '../types/ItemTypes'
 
 function Ashes(props: BuildSetProps) {
     return (
-        <div className='ashes-container'>
-            <h1 className={`section-container-title${props.size}`}>Ashes</h1>
+        <div>
+            <h1>Ashes</h1>
             {props.items.map((ash: BuildItem) => {
                 return (
                     <Item

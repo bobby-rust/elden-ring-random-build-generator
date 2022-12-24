@@ -2,14 +2,18 @@ import React from 'react'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 type HeaderProps = {
-    color: string,
-    colorButtonState: boolean,
-    layoutButtonState: boolean,
-    handleColorChange: () => void,
-    handleLayoutChange: () => void,
+    color: string
+    colorButtonState: boolean
+    layoutButtonState: boolean
+    handleColorChange: () => void
+    handleLayoutChange: () => void
 }
 
 function Header(props: HeaderProps) {
+    /**
+     * This is NOT a generic component.
+     * It remains constant through every layout and can be styled here.
+     */
     return (
         <div className={`header-container${props.color}`}>
             <div className='logo-container'>
