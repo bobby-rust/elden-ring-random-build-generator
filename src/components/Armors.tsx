@@ -8,14 +8,12 @@ function Armors(props: BuildSetProps) {
         <>
             {props.items.map((currArmor: BuildItem) => {
                 return (
-                    <div className={''} key={v4()}>
-                        <Item
-                            key={v4()}
-                            item={currArmor}
-                            color={props.color}
-                            size={props.size}
-                        />
-                    </div>
+                    <Item
+                        key={v4()}
+                        item={currArmor}
+                        color={props.color}
+                        size={props.size}
+                    />
                 )
             })}
         </>

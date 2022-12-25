@@ -125,16 +125,17 @@ function App() {
                     size={layout.size}
                 />
             )} */}
-
-            <SmallLayout
-                color={darkMode.color}
-                build={build}
-                handleColorChange={handleColorChange}
-                handleLayoutChange={handleLayoutChange}
-                generateNewBuild={generateNewBuild}
-                size={layout.size}
-            />
-            <DevMessage />
+            <div className='App-sm'>
+                <SmallLayout
+                    color={darkMode.color}
+                    build={build}
+                    handleColorChange={handleColorChange}
+                    handleLayoutChange={handleLayoutChange}
+                    generateNewBuild={generateNewBuild}
+                    size={layout.size}
+                />
+                <DevMessage />
+            </div>
             <AnalyticsWrapper />
         </>
     )
