@@ -53,8 +53,7 @@ function SmallLayout(props) {
                             size={props.size}
                         />
                     </div>
-                </div>
-                <div className='secondary-items-sm'>
+                    <div className='sorcs-incants-sm'>
                     <div className='sorcs-sm'>
                         <Sorceries
                             items={props.build['sorcs']}
@@ -67,25 +66,28 @@ function SmallLayout(props) {
                             color={props.color}
                         />
                     </div>
+                    </div>
                     <div className='talismans-sm'>
                         <Talismans
                             items={props.build['talismans']}
                             color={props.color}
                         />
                     </div>
-                    <div className='ashes-spirits-sm'>
+                    <div className='ashes-sm'>
                         <Ashes
                             items={props.build['ashes']}
                             color={props.color}
                         />
+                        </div>
+                        <div className='spirits-sm'>
                         <Spirits
                             items={props.build['spirits']}
                             color={props.color}
                         />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 
