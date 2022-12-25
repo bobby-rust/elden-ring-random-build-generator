@@ -30,7 +30,7 @@ function SmallLayout(props) {
                             />
                         </div>
                     </div>
-                    <div classname='weapons-shield-container'>
+                    <div className='weapons-shield-container'>
                         <div className='weapons-sm'>
                             <Weapons
                                 weapons={props.build['weapons']}
@@ -54,18 +54,18 @@ function SmallLayout(props) {
                         />
                     </div>
                     <div className='sorcs-incants-sm'>
-                    <div className='sorcs-sm'>
-                        <Sorceries
-                            items={props.build['sorcs']}
-                            color={props.color}
-                        />
-                    </div>
-                    <div className='incants-sm'>
-                        <Incantations
-                            items={props.build['incants']}
-                            color={props.color}
-                        />
-                    </div>
+                        <div className='sorcs-sm'>
+                            <Sorceries
+                                items={props.build['sorcs']}
+                                color={props.color}
+                            />
+                        </div>
+                        <div className='incants-sm'>
+                            <Incantations
+                                items={props.build['incants']}
+                                color={props.color}
+                            />
+                        </div>
                     </div>
                     <div className='talismans-sm'>
                         <Talismans
@@ -73,21 +73,23 @@ function SmallLayout(props) {
                             color={props.color}
                         />
                     </div>
-                    <div className='ashes-sm'>
-                        <Ashes
-                            items={props.build['ashes']}
-                            color={props.color}
-                        />
+                    <div className='ashes-spirits-sm'>
+                        <div className='ashes-sm'>
+                            <Ashes
+                                items={props.build['ashes']}
+                                color={props.color}
+                            />
                         </div>
                         <div className='spirits-sm'>
-                        <Spirits
-                            items={props.build['spirits']}
-                            color={props.color}
-                        />
+                            <Spirits
+                                items={props.build['spirits']}
+                                color={props.color}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 

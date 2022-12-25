@@ -5,7 +5,7 @@ import { BuildSetProps, BuildItem } from '../types/ItemTypes'
 
 function Talismans(props: BuildSetProps) {
     return (
-        <div>
+        <>
             <h1>Talismans</h1>
             {props.items.map((talisman: BuildItem) => {
                 return (
@@ -17,7 +17,7 @@ function Talismans(props: BuildSetProps) {
                     />
                 )
             })}
-        </div>
+        </>
     )
 }
 

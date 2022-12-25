@@ -3,7 +3,7 @@ import React from 'react'
 function DevMessage() {
     return (
         <>
-            <div>
+            <div className='footer'>
                 <p>
                     This tool is in development. Some features may not work.
                     There may be missing and/or incorrect data. Submit an issue

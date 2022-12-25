@@ -15,7 +15,15 @@ function Item(props: BuildItemProps) {
                 rel='noreferrer'
                 target='_blank'
             >
-                <img className='item-img' src={props.item.image} alt={props.item.name + ' img'} />
+                {props.item.image === undefined ? (
+                    <span>loading...</span>
+                ) : (
+                    <img
+                        className='item-img'
+                        src={props.item.image}
+                        alt={props.item.name + ' img'}
+                    />
+                )}
             </a>
             <p className='item-desc'>{props.item.description}</p>
         </div>

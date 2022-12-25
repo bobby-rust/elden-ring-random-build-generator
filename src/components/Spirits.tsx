@@ -5,7 +5,7 @@ import { BuildItem, BuildSetProps } from '../types/ItemTypes'
 
 function Spirits(props: BuildSetProps) {
     return (
-        <div>
+        <>
             {/* <h2>Spirits</h2> */}
             {props.items.map((spirit: BuildItem) => {
                 return (
@@ -17,7 +17,7 @@ function Spirits(props: BuildSetProps) {
                     />
                 )
             })}
-        </div>
+        </>
     )
 }
 

@@ -104,7 +104,7 @@ function App() {
                 colorButtonState={colorButtonState}
             />
 
-            {layout.isLargeLayout && (
+            {/* {layout.isLargeLayout && (
                 <LargeLayout
                     color={darkMode.color}
                     build={build}
@@ -124,7 +124,16 @@ function App() {
                     generateNewBuild={generateNewBuild}
                     size={layout.size}
                 />
-            )}
+            )} */}
+
+            <SmallLayout
+                color={darkMode.color}
+                build={build}
+                handleColorChange={handleColorChange}
+                handleLayoutChange={handleLayoutChange}
+                generateNewBuild={generateNewBuild}
+                size={layout.size}
+            />
             <DevMessage />
             <AnalyticsWrapper />
         </>

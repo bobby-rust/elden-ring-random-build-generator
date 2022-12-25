@@ -5,7 +5,7 @@ import { BuildSetProps, BuildItem } from '../types/ItemTypes'
 
 function Sorceries(props: BuildSetProps) {
     return (
-        <div>
+        <>
             <h1>Sorceries</h1>
             {props.items.map((sorc: BuildItem) => {
                 return (
@@ -17,7 +17,7 @@ function Sorceries(props: BuildSetProps) {
                     />
                 )
             })}
-        </div>
+        </>
     )
 }
 
