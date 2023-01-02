@@ -18,12 +18,6 @@ import DevMessage from './components/DevMessage.tsx'
 // Could do early game, mid game, late game by sorting the weapons by their damage and type and
 // Sorting by required attributes for early/mid/late game
 
-// The components' styles should not be linked in any way to one specific layout
-// It should be the layout's responsibility to style its items independently
-// This is going to be a huge CSS refactor. Buckle up.
-// Need to do this smart and plan out the process.
-// I'm going to back up the CSS file to use as a reference and start clean
-
 function App() {
     // Set up media state
     const [mediaState, setMediaState] = React.useState({
