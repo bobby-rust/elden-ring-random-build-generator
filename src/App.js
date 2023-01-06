@@ -79,6 +79,7 @@ function App() {
 
                 {mediaState.isLargeMedia && layout.isLargeLayout && (
                     <div className={`App${darkMode.color}`}>
+                        <div className="deprecation-informer">You are using the old version. Try out the new version at <a href="https://erbg.vercel.app/" target="_blank" rel="noopener norefferer"> <span style={{ marginLeft: '5px'}}>https://erbg.vercel.app</span></a>!</div>
                         <Header color={darkMode.color} />
                         <LargeLayout
                             color={darkMode.color}

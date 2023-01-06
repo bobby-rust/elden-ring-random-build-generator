@@ -25,6 +25,15 @@
     --font-ltmd: black;
     --highlight-ltmd-dk: rgba(220, 220, 220, 0.5);
 }
+
+.deprecation-informer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-align: center;
+    background-color:#232323;
+}
 /**
 * END GLOBAL
 */
